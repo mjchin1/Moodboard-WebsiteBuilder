@@ -1,5 +1,4 @@
 const { Client } = require("pg");
-const dbName = "WebsiteBuilder"
-const client = new Client(`postgres://localhost:54321/${dbName}`)
+const client = new Client(`postgres://localhost:54321/websitebuilder`);
 
 module.exports = client;
