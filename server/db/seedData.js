@@ -34,5 +34,5 @@ const userWebsites = [
 module.exports = {
   websiteContent,
   users,
-  userContent,
+  userWebsites,
 };

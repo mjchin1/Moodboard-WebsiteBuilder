@@ -3,9 +3,7 @@ const client = require("../client");
 async function createUser(body) {
   const { first_name, username, password } = body;
   try {
-    const {
-      rows: [users],
-    } = await client.query(
+    const { rows } = await client.query(
       `
         INSERT INTO users(first_name, username, password)
         VALUES($1, $2, $3)
@@ -13,7 +11,7 @@ async function createUser(body) {
         `,
       [first_name, username, password]
     );
-    return users;
+    return rows;
   } catch (error) {
     throw new Error(`Failed to create user: ${error.message}`);
   }
@@ -21,16 +19,14 @@ async function createUser(body) {
 
 async function getUserById(id) {
   try {
-    const {
-      rows: [user],
-    } = await client.query(
+    const { rows } = await client.query(
       `
       SELECT * FROM users
       WHERE users.user_id = $1;
       `,
       [id]
     );
-    return user;
+    return rows;
   } catch (error) {
     throw new Error(`Could not get user because ${error.message} :(`);
   }
@@ -38,21 +34,35 @@ async function getUserById(id) {
 
 async function getUserByUsername(username) {
   try {
-    const { rows: user } = await client.query(`
+    const { rows } = await client.query(`
         SELECT * FROM users
         WHERE users.username = '${username}'
         `);
-    return user;
+    return rows;
   } catch (error) {
     throw new Error(`Failed to log user in because ${error.message}`);
   }
 }
 
+async function logUserIn(body) {
+  const { username, password } = body;
+  try {
+    const { rows } = await client.query(
+      `
+          SELECT * FROM users
+          WHERE username = $1 AND password = $2;
+      `,
+      [username, password]
+    );
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
 async function deleteUser(id) {
   try {
-    const {
-      rows: [users],
-    } = await client.query(
+    const { rows } = await client.query(
       `
         DELETE FROM users
         WHERE id=$1
@@ -68,6 +78,7 @@ async function deleteUser(id) {
 module.exports = {
   createUser,
   getUserById,
+  logUserIn,
   getUserByUsername,
   deleteUser,
 };

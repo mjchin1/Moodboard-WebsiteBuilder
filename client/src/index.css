@@ -66,3 +66,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.mainPhoto {
+  width: 500px;
+}
+
+.midPhoto{
+  display: inline-flex;
+  width: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerPhoto {
+  width: 700px;
+}

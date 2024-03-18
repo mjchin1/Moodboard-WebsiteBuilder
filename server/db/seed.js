@@ -29,23 +29,23 @@ async function createTables() {
             mid_photo2 TEXT,
             p2_heading TEXT,
             p2_body TEXT,
-            footer_photo TEXT,
+            footer_photo TEXT
         );
         CREATE TABLE users (
             user_id SERIAL PRIMARY KEY,
             first_name TEXT NOT NULL,
             username TEXT UNIQUE NOT NULL,
-            password TEXT NOT NULL, 
+            password TEXT NOT NULL 
         );
         CREATE TABLE user_websites (
             user_website_id SERIAL PRIMARY KEY, 
             user_id INTEGER REFERENCES users(user_id),
-            website_id INTEGER REFERENCES website_content(website_id),
+            website_id INTEGER REFERENCES website_content(website_id)
         );
         `);
   } catch (error) {
     console.log("error creating tables");
-    throw error;
+
   }
 }
 
