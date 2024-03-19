@@ -81,3 +81,8 @@ button:focus-visible {
 .footerPhoto {
   width: 700px;
 }
+
+a {
+  padding-left: 10px;
+  padding-right: 10px;
+}

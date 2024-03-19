@@ -2,16 +2,16 @@ const client = require("../client");
 
 async function createWebsite(body) {
   const {
-    main_heading,
+    mainHeading,
     subheading,
-    main_photo,
-    p1_heading,
-    p1_body,
-    mid_photo1,
-    mid_photo2,
-    p2_heading,
-    p2_body, 
-    footer_photo,
+    mainPhoto,
+    p1Heading,
+    p1Body,
+    midPhoto1,
+    midPhoto2,
+    p2Heading,
+    p2Body,
+    footerPhoto,
   } = body;
   try {
     const {
@@ -23,22 +23,22 @@ async function createWebsite(body) {
           RETURNING *;
       `,
       [
-        main_heading,
+        mainHeading,
         subheading,
-        main_photo,
-        p1_heading,
-        p1_body,
-        mid_photo1,
-        mid_photo2,
-        p2_heading,
-        p2_body, 
-        footer_photo,
+        mainPhoto,
+        p1Heading,
+        p1Body,
+        midPhoto1,
+        midPhoto2,
+        p2Heading,
+        p2Body,
+        footerPhoto,
       ]
     );
     return website;
-    } catch (error) {
+  } catch (error) {
     throw new Error(`Failed to create website: ${error.message}`);
-    }
+  }
 }
 
 async function getWebsiteById(id) {
@@ -71,26 +71,33 @@ async function deleteWebsite(id) {
       [id]
     );
     return website;
-    } catch (error) {
+  } catch (error) {
     throw new Error(`Failed to delete website: ${error.message}`);
-    }
+  }
 }
 
 async function updateWebsite(id, fields = {}) {
-  const setString = Object.keys(fields).map((key, index) => `"${key}"=$${index + 1}`).join(', ');
+  const setString = Object.keys(fields)
+    .map((key, index) => `"${key}"=$${index + 1}`)
+    .join(", ");
   if (setString.length === 0) {
-      return;
+    return;
   }
   try {
-      const { rows: [websites] } = await client.query(`
+    const {
+      rows: [websites],
+    } = await client.query(
+      `
       UPDATE website_content
       SET ${setString}
       WHERE website_id=${id}
       RETURNING *;
-      `, Object.values(fields));
-      return websites;
+      `,
+      Object.values(fields)
+    );
+    return websites;
   } catch (error) {
-      throw new Error(`Website update failed: ${error.message}`);
+    throw new Error(`Website update failed: ${error.message}`);
   }
 }
 

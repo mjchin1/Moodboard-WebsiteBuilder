@@ -10,10 +10,11 @@ const {
 
 router.post("/", async (req, res, next) => {
   try {
-    const website = await createWebsite();
+    const website = await createWebsite(req.body);
     res.send(website);
   } catch (error) {
     next(error);
+    throw new Error(`${error.message}`);
   }
 });
 

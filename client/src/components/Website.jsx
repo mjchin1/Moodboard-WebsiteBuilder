@@ -6,7 +6,7 @@ export default function Website() {
   useEffect(() => {
     async function getWebsite() {
       try {
-        const response = await fetch('http://localhost:8080/api/websites/1', {
+        const response = await fetch('http://localhost:8080/api/websites/2', {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
