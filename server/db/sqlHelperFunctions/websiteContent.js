@@ -1,5 +1,18 @@
 const client = require("../client");
 
+async function getAllWebsites() {
+  try {
+    const { rows } = await client.query(
+      `
+          SELECT * FROM website_content;
+      `
+    );
+    return rows;
+  } catch (error) {
+    throw new Error(`Failed to fetch website: ${error.message}`);
+  }
+}
+
 async function createWebsite(body) {
   const {
     mainHeading,
@@ -102,6 +115,7 @@ async function updateWebsite(id, fields = {}) {
 }
 
 module.exports = {
+  getAllWebsites,
   createWebsite,
   getWebsiteById,
   deleteWebsite,

@@ -2,11 +2,21 @@ const express = require("express");
 const router = express.Router();
 
 const {
+  getAllWebsites,
   createWebsite,
   getWebsiteById,
   deleteWebsite,
   updateWebsite,
 } = require("../db/sqlHelperFunctions/websiteContent");
+
+router.get("/", async (req, res, next) => {
+  try {
+    const websites = await getAllWebsites();
+    res.send(websites);
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.post("/", async (req, res, next) => {
   try {

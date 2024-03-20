@@ -30,7 +30,11 @@ export default function SavedWebsites ({ user, savedWebsites, setSavedWebsites }
           <>
           <div key={website.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
-              <span className="savedWebsiteName">  {website.main_heading} </span> <br /> <br/>
+              <button className="savedWebsiteName" onClick={() => {
+                navigate("/website")
+              }}
+              
+              >  {website.main_heading} </button> <br /> <br/>
             </div>
           </div>
           </>
@@ -41,4 +45,4 @@ export default function SavedWebsites ({ user, savedWebsites, setSavedWebsites }
 
     </>
   );
-};
+}; 
