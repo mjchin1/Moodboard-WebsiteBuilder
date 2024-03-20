@@ -7,7 +7,7 @@ const {
   addToSavedWebsites,
   deleteSavedWebsite,
   getSavedWebsitesByUserId,
-} = require("../db/sqlHelperFunctions/websiteContent");
+} = require("../db/sqlHelperFunctions/userWebsites");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -36,15 +36,6 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.get("/users/:id", async (req, res, next) => {
-  try {
-    const website = await getSavedWebsiteByUserId(req.params.id);
-    res.send(website);
-  } catch (error) {
-    next(error);
-  }
-});
-
 router.delete("/:id", async (req, res, next) => {
   try {
     const website = await deleteSavedWebsite(req.params.id);
@@ -56,8 +47,8 @@ router.delete("/:id", async (req, res, next) => {
 
 router.get("/user/:id", async (req, res, next) => {
   try {
-    const website = await getSavedWebsitesByUserId(req.params.id);
-    res.send(website);
+    const websites = await getSavedWebsitesByUserId(req.params.id);
+    res.send(websites);
   } catch (error) {
     next(error);
   }
