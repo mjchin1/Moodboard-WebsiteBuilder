@@ -5,6 +5,7 @@ export default function Navigations() {
         <nav>
             <Link to = '/'>Home</Link>
             <Link to = '/form'>Form</Link>
+            <Link to = '/register'>Form</Link>
         </nav>
     );
 };
