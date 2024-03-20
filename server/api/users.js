@@ -9,7 +9,7 @@ const {
   deleteUser,
 } = require("../db/sqlHelperFunctions/users");
 
-router.post("/register", async (req, res, next) => {
+router.post("/", async (req, res, next) => {
   try {
     const user = await createUser(req.body);
     res.send(user);

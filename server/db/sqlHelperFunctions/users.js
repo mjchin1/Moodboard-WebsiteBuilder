@@ -1,7 +1,7 @@
 const client = require("../client");
 
 async function createUser(body) {
-  const { first_name, username, password } = body;
+  const { firstName, username, password } = body;
   try {
     const { rows } = await client.query(
       `
@@ -9,7 +9,7 @@ async function createUser(body) {
         VALUES($1, $2, $3)
         RETURNING *;
         `,
-      [first_name, username, password]
+      [firstName, username, password]
     );
     return rows;
   } catch (error) {
