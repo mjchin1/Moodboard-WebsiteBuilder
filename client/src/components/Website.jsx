@@ -3,6 +3,7 @@ import { useParams} from 'react-router-dom';
 
 
 export default function Website({website, setWebsite}) {
+  console.log(website)
   const {id} = useParams();
   useEffect(() => {
     async function getWebsite() {

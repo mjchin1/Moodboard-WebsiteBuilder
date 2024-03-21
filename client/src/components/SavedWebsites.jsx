@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate }  from 'react-router-dom';
 
-export default function SavedWebsites ({ user, savedWebsites, setSavedWebsites }) {
+export default function SavedWebsites ({ user, website, setWebsite, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
   console.log(user)
   console.log(user.user_id)
@@ -36,6 +36,7 @@ export default function SavedWebsites ({ user, savedWebsites, setSavedWebsites }
           <div key={website.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
               <button className="savedWebsiteName" onClick={() => {
+                setWebsite(website);
                 navigate(`/website/${website.website_id}`)
               }}
               
