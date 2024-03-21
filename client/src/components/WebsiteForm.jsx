@@ -47,6 +47,7 @@ export default function WebsiteForm () {
       setP2Body("");
       setFooterPhoto("");
       console.log(result)
+      setWebsite(result)
     } catch (error) {
     }
 

@@ -7,20 +7,20 @@ import WebsiteForm from './components/WebsiteForm'
 import Navigations from './components/Navigations'
 import Registration from './components/Registration'
 import SavedWebsites from './components/SavedWebsites'
-
+import Login from './components/Login'
 
 
 function App() {
   const [websites, setWebsites] = useState([]);
   const [website, setWebsite] = useState({});
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState({})
   const [savedWebsites, setSavedWebsites] = useState([])
 
   
 
   return (
     <>
-      <Navigations/>
+      <Navigations user={user} setUser={setUser}/>
       <Routes>
       <Route path='/' element={<Registration/>} />
       <Route path='/all' element={<AllWebsites websites={websites} setWebsites={setWebsites}/>} />
@@ -28,7 +28,8 @@ function App() {
       <Route path='/website/:id' element={<Website website={website} setWebsite={setWebsite}/>} />
       <Route path='/form' element={<WebsiteForm/>} />
       <Route path='/register' element={<Registration user={user} setUser={setUser}/>} />
-      <Route path='/websites' element={<SavedWebsites website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
+      <Route path='/login' element={<Login user={user} setUser={setUser}/>} />
+      <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
     </>
   )

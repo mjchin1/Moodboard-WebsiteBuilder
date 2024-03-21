@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useParams} from 'react-router-dom';
 
 
 export default function Website({website, setWebsite}) {
+  const {id} = useParams();
   useEffect(() => {
     async function getWebsite() {
       try {
-        const response = await fetch(`http://localhost:8080/api/websites/1`, {
+        const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -13,7 +15,7 @@ export default function Website({website, setWebsite}) {
         });
         const result = await response.json();
         setWebsite(result);
-        console.log(result)
+        console.log(website.website_id)
       } catch (error) {
       }
     }
