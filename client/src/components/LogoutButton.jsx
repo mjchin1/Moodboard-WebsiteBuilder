@@ -1,7 +1,9 @@
 
 export default function LogoutButton({ setUser, user }) {
   function clearUser() {
-    setUser({})
+ 
+    setUser([])
+    console.log(user)
   };
 
   return (

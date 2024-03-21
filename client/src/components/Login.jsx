@@ -3,8 +3,6 @@ import { useState } from 'react';
 export default function Login({ setUser, user}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -16,12 +14,17 @@ export default function Login({ setUser, user}) {
         body: JSON.stringify({ username, password })
       });
       const result = await response.json();
-      setUser(result)
+      setUser(result[0])
       console.log(user)
       setUsername("");
       setPassword("");
     } catch (error) {
     };
+
+   function confirmUser() {
+    setUser(user)
+    console.log(user)
+   }
 
   };
 

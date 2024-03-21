@@ -3,6 +3,8 @@ import { useNavigate }  from 'react-router-dom';
 
 export default function SavedWebsites ({ user, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
+  console.log(user)
+  console.log(user.user_id)
   
   useEffect(() => {
     async function fetchSavedWebsites() {
