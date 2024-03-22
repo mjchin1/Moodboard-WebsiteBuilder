@@ -11,6 +11,8 @@ export default function Navigations({user, setUser, setWebsite, setSavedWebsites
             <Link to = '/websites'>Saved</Link>
             <Link to = '/all'>All Websites</Link>
             <Link to = '/website/:id'>Website</Link>
+            <Link to = '/websiteCreated'>Website Created</Link>
+            <Link to = '/websiteSaved'>Website Saved</Link>
 
            {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
         </nav>

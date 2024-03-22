@@ -49,7 +49,7 @@ export default function WebsiteForm ({website, setWebsite}) {
       console.log(result)
       setWebsite(result)
       console.log(website)
-      navigate(`/website/${website.website_id}`)
+      navigate('/websiteCreated')
 
     } catch (error) {
     }

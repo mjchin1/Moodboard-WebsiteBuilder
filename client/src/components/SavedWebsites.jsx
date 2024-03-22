@@ -5,7 +5,6 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
   const navigate = useNavigate();
   console.log(website)
   console.log(savedWebsites)
-  console.log(user);
   useEffect(() => {
     async function fetchSavedWebsites() {
       try {
@@ -27,9 +26,13 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
 
   return (
     <>
+    <div>
     <br/>
+    <h2>Saved Websites</h2>
+    { user.user_id? 
+   
     <div className="savedWebsitesContainer">
-      <h2>Saved Websites</h2>
+      
       <>
         {savedWebsites.map((savedWebsite) => (
           <>
@@ -47,6 +50,9 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
         ))}
 
       </>
+    </div>
+    : <p>No websites saved.</p>
+      }
     </div>
 
     </>

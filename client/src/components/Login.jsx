@@ -3,7 +3,6 @@ import { useState } from 'react';
 export default function Login({ setUser, user}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  console.log(user)
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -16,7 +15,6 @@ export default function Login({ setUser, user}) {
       });
       const result = await response.json();
       setUser(result[0])
-      console.log(user)
       setUsername("");
       setPassword("");
     } catch (error) {

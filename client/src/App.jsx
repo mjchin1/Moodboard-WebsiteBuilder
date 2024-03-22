@@ -8,6 +8,9 @@ import Navigations from './components/Navigations'
 import Registration from './components/Registration'
 import SavedWebsites from './components/SavedWebsites'
 import Login from './components/Login'
+import WebsiteCreatedMessage from './components/WebsiteCreatedMessage'
+import WebsiteSavedMessage from './components/WebsiteSavedMessage'
+
 
 
 
@@ -29,6 +32,8 @@ function App() {
       <Route path='/form' element={<WebsiteForm website={website} setWebsite={setWebsite}/>} />
       <Route path='/register' element={<Registration website={website} user={user} setUser={setUser}/>} />
       <Route path='/login' element={<Login user={user} setUser={setUser}/>} />
+      <Route path='/websiteCreated' element={<WebsiteCreatedMessage website={website}/>} />
+      <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
     </>
