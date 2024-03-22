@@ -7,7 +7,7 @@ export default function WebsiteSavedMessage() {
     <>
     <h2>Your website has been saved.</h2> <br/>
     <div className="navigateButton">
-      <button onClick={navigate("/websites")}
+      <button onClick={() => navigate("/websites")}
       > Go to saved Websites </button>
     </div>
     </>
