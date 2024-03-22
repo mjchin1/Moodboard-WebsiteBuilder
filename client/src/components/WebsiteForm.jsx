@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function WebsiteForm () {
+export default function WebsiteForm ({website, setWebsite}) {
   const [mainHeading, setMainHeading] = useState("");
   const [subheading, setSubheading] = useState("");
   const [mainPhoto, setMainPhoto] = useState("");
@@ -48,6 +48,8 @@ export default function WebsiteForm () {
       setFooterPhoto("");
       console.log(result)
       setWebsite(result)
+      console.log(website)
+
     } catch (error) {
     }
 

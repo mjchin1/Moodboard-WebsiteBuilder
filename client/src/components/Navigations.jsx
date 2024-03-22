@@ -10,7 +10,7 @@ export default function Navigations({user, setUser}) {
             <Link to = '/login'>Login</Link>
             <Link to = '/websites'>Saved</Link>
             <Link to = '/all'>All Websites</Link>
-            <Link to = '/website'>Website</Link>
+            <Link to = '/website/:id'>Website</Link>
             <LogoutButton user={user} setUser={setUser}/>
         </nav>
     );

@@ -20,7 +20,9 @@ export default function Website({website, setWebsite}) {
       } catch (error) {
       }
     }
-    getWebsite();
+    if (website.website_id) {
+      getWebsite();
+    }
   }, []);
 
   return (
