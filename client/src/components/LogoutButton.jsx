@@ -1,9 +1,11 @@
 
-export default function LogoutButton({ setUser, user }) {
+export default function LogoutButton({ setUser, setWebsite, setSavedWebsites }) {
   function clearUser() {
  
     setUser([])
-    console.log(user)
+    setWebsite({})
+    setSavedWebsites([])
+    console.log("user cleared")
   };
 
   return (

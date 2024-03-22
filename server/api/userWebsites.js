@@ -20,7 +20,7 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const website = await addToSavedWebsites();
+    const website = await addToSavedWebsites(req.body);
     res.send(website);
   } catch (error) {
     next(error);

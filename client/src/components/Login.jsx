@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function Login({ setUser, user}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  console.log(user)
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -21,17 +22,16 @@ export default function Login({ setUser, user}) {
     } catch (error) {
     };
 
-   function confirmUser() {
-    setUser(user)
-    console.log(user)
-   }
 
   };
 
   return (
     <>
+
       <br/>
-      <div className="loginPage">     
+      <div className="loginPage"> 
+      { !user.user_id ? 
+        
           <form className="loginForm"onSubmit={handleSubmit}>
             <h2 className="loginHeading">Log In</h2>
             <label>
@@ -43,7 +43,13 @@ export default function Login({ setUser, user}) {
             <button className="submitButton"
             >Submit</button>
           </form>
-        </div>
+     
+        
+        : <h2> Welcome, {`${user.first_name}`}! You have been logged in. </h2>
+
+      }
+
+      </div>
     </>
 
   );

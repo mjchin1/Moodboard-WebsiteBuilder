@@ -3,9 +3,9 @@ import { useNavigate }  from 'react-router-dom';
 
 export default function SavedWebsites ({ user, website, setWebsite, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
-  console.log(user)
-  console.log(user.user_id)
-  
+  console.log(website)
+  console.log(savedWebsites)
+  console.log(user);
   useEffect(() => {
     async function fetchSavedWebsites() {
       try {
@@ -18,7 +18,6 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
         const result = await response.json();
         setSavedWebsites(result);
         console.log(result)
-        console.log(user)
       } catch (error) {
         throw new Error(`${error.message}`)
       }
@@ -30,17 +29,18 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     <>
     <br/>
     <div className="savedWebsitesContainer">
+      <h2>Saved Websites</h2>
       <>
-        {savedWebsites.map((website) => (
+        {savedWebsites.map((savedWebsite) => (
           <>
-          <div key={website.user_website_id} className="savedWebsiteCard">
+          <div key={savedWebsite.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
               <button className="savedWebsiteName" onClick={() => {
-                setWebsite(website);
-                navigate(`/website/${website.website_id}`)
+                setWebsite(savedWebsite);
+                navigate(`/website/${savedWebsite.website_id}`);
               }}
               
-              >  {website.main_heading} </button> <br /> <br/>
+              >  {savedWebsite.main_heading} </button> <br /> <br/>
             </div>
           </div>
           </>

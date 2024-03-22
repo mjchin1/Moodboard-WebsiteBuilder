@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import RegistrationMessage from './RegistrationMessage'
 
-export default function Register({user, setUser}) {
+export default function Register({user, website, setUser}) {
   const [firstName, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -30,7 +33,11 @@ export default function Register({user, setUser}) {
 
   return (
     <>
+     { !user.user_id? 
     <div className="register">
+   
+
+      <h3>Please register to save your website.</h3>
 
       <form className="registrationForm" onSubmit={handleSubmit}>
         <label>
@@ -45,8 +52,13 @@ export default function Register({user, setUser}) {
         <button className="submitButton">Submit</button> 
        
       </form>
-
+      <br/>
+      <h3> Already have an account? Log in{<Link to = "/login">here</Link>}.</h3>
+  
     </div>
+      : 
+      <RegistrationMessage user={user} website={website}/>
+     } 
     </>
   );
 };

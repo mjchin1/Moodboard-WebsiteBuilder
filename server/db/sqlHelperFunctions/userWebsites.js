@@ -27,15 +27,15 @@ async function getUserWebsiteById(id) {
 }
 
 async function addToSavedWebsites(body) {
-  const { user_id, user_website_id } = body;
+  const { user_id, website_id } = body;
   try {
     const { rows } = await client.query(
       `
-          INSERT INTO user_websites(user_id, user_website_id)
+          INSERT INTO user_websites(user_id, website_id)
           VALUES($1, $2)
           RETURNING *;
       `,
-      [user_id, user_website_id]
+      [user_id, website_id]
     );
     return rows;
   } catch (error) {
@@ -65,7 +65,7 @@ async function getSavedWebsitesByUserId(id) {
       `
           SELECT * FROM website_content
           INNER JOIN user_websites
-          ON user_websites.user_website_id = website_content.website_id
+          ON user_websites.website_id = website_content.website_id
           WHERE user_websites.user_id = $1;
       `,
       [id]

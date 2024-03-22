@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import SaveWebsiteButton from './SaveWebsiteButton'
 
 
-export default function Website({website, setWebsite}) {
-  console.log(website)
-  const {id} = useParams();
+export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
+  const navigate = useNavigate();
   useEffect(() => {
     async function getWebsite() {
       try {
@@ -16,7 +16,6 @@ export default function Website({website, setWebsite}) {
         });
         const result = await response.json();
         setWebsite(result);
-        console.log(website.website_id)
       } catch (error) {
       }
     }
@@ -37,9 +36,8 @@ export default function Website({website, setWebsite}) {
       <h3>{website.p2_heading}</h3>
       <p>{website.p2_body}</p>
       <img className="footerPhoto" src={website.footer_photo}></img>
-
-
-  
+     
+      <SaveWebsiteButton savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
 
    </>
 
