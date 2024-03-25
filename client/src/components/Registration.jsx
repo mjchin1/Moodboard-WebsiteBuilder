@@ -37,7 +37,7 @@ export default function Register({user, website, setUser}) {
     <div className="register">
    
 
-      <h3>Please register to save your website.</h3>
+      <h2>Register</h2>
 
       <form className="registrationForm" onSubmit={handleSubmit}>
         <label>

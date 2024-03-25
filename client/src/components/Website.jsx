@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react';
 import { useNavigate} from 'react-router-dom';
 import SaveWebsiteButton from './SaveWebsiteButton'
+import RegistrationReminderModal from './RegistrationReminderModal'
 
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
   const navigate = useNavigate();
+
+  const [modal, setModal] = useState(false);
+
+  function toggleModal() {
+    setModal(!modal)
+  }
+
   useEffect(() => {
     async function getWebsite() {
       try {
@@ -37,7 +45,9 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <p>{website.p2_body}</p>
       <img className="footerPhoto" src={website.footer_photo}></img>
      
-      <SaveWebsiteButton savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+      <SaveWebsiteButton toggleModal={toggleModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+
+      {modal? <RegistrationReminderModal toggleModal={toggleModal} /> : null}
 
    </>
 
