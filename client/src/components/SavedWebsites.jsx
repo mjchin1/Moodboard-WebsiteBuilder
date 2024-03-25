@@ -33,7 +33,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     <div>
     <br/>
     <h2>Saved Websites</h2>
-    { user.user_id? 
+    { savedWebsites.length? 
    
     <div className="savedWebsitesContainer">
       

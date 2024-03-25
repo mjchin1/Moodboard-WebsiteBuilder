@@ -2,6 +2,11 @@ import { useNavigate } from 'react-router-dom'
 
 export default function WebsiteSavedMessage({toggleSavedMessageModal}) {
   const navigate = useNavigate(); 
+
+  function handleClick() {
+    toggleSavedMessageModal();
+
+  }
   
   return (
     <>
@@ -10,7 +15,7 @@ export default function WebsiteSavedMessage({toggleSavedMessageModal}) {
     <div className="navigateButton">
       <button onClick={() => navigate("/websites")}
       > Go to saved Websites </button>
-      <button onClick={toggleSavedMessageModal}>Close</button>
+      <button onClick={handleClick}>Close</button>
     </div>
 
     </div>
