@@ -1,6 +1,5 @@
 
 export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleModal, user_id, website_id, setSavedWebsites, savedWebsites }) {
-  const navigate = useNavigate();
 
   async function handleClick() {
     try {

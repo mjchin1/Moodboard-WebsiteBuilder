@@ -1,8 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate }  from 'react-router-dom';
+import ConfirmRemovalModal from './ConfirmRemovalModal'
 
 export default function SavedWebsites ({ user, website, setWebsite, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
+  const [removalModal, setRemovalModal] = useState()
+
+  function toggleRemovalModal() {
+    setRemovalModal(!removalModal)
+  }
+
   useEffect(() => {
     async function fetchSavedWebsites() {
       try {
@@ -19,7 +26,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
       }
     }
     fetchSavedWebsites();
-  }, []);
+  }, [savedWebsites]);
 
   return (
     <>
@@ -35,14 +42,16 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
           <>
           <div key={savedWebsite.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
+              <p>{savedWebsite.main_heading}</p>
               <button className="savedWebsiteName" onClick={() => {
                 setWebsite(savedWebsite);
                 navigate(`/website/${savedWebsite.website_id}`);
               }}
-              
-              >  {savedWebsite.main_heading} </button> <br /> <br/>
+              >  Go To Website </button> <br /> <br/>
+              <button onClick={toggleRemovalModal}>Delete</button>
             </div>
           </div>
+          {removalModal&& <ConfirmRemovalModal toggleRemovalModal={toggleRemovalModal} savedWebsite={savedWebsite} savedWebsites={savedWebsites}/>}
           </>
         ))}
 
@@ -51,6 +60,8 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     : <p>No websites saved.</p>
       }
     </div>
+
+   
 
     </>
   );
