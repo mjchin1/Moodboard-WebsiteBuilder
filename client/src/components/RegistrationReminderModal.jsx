@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 
-export default function RegistrationReminderModal({ toggleModal }) {
+export default function RegistrationReminderModal({ toggleRegistrationModal }) {
   const navigate= useNavigate()
   
 
@@ -16,15 +16,15 @@ export default function RegistrationReminderModal({ toggleModal }) {
         <p> To save your website, you will need to create an account. </p>
 
         <button onClick= { () => {
-        toggleModal()
+        toggleRegistrationModal()
         console.log("buttonClicked")
         goToRegistration() 
       }
       }> 
         Register
       </button>
-      
-      <button onClick={toggleModal}> Close </button>
+
+      <button onClick={toggleRegistrationModal}> Close </button>
       </div>
       </div>
 

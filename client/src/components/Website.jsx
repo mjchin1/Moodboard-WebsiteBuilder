@@ -2,15 +2,21 @@ import { useState, useEffect } from 'react';
 import { useNavigate} from 'react-router-dom';
 import SaveWebsiteButton from './SaveWebsiteButton'
 import RegistrationReminderModal from './RegistrationReminderModal'
+import WebsiteSavedMessage from './WebsiteSavedMessage'
 
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
   const navigate = useNavigate();
 
-  const [modal, setModal] = useState(false);
+  const [registrationModal, setRegistrationModal] = useState(false);
+  const [savedMessageModal, setSavedMessageModal] = useState(false);
 
-  function toggleModal() {
-    setModal(!modal)
+  function toggleRegistrationModal() {
+    setRegistrationModal(!registrationModal)
+  }
+
+  function toggleSavedMessageModal() {
+    setSavedMessageModal(!savedMessageModal)
   }
 
   useEffect(() => {
@@ -45,9 +51,10 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <p>{website.p2_body}</p>
       <img className="footerPhoto" src={website.footer_photo}></img>
      
-      <SaveWebsiteButton toggleModal={toggleModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+      <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
 
-      {modal? <RegistrationReminderModal toggleModal={toggleModal} /> : null}
+      {registrationModal? <RegistrationReminderModal toggleRegistrationModal={toggleRegistrationModal} /> : null}
+      {savedMessageModal? <WebsiteSavedMessage toggleSavedMessageModal={toggleSavedMessageModal} /> : null}
 
    </>
 

@@ -3,8 +3,6 @@ import { useNavigate }  from 'react-router-dom';
 
 export default function SavedWebsites ({ user, website, setWebsite, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
-  console.log(website)
-  console.log(savedWebsites)
   useEffect(() => {
     async function fetchSavedWebsites() {
       try {
@@ -16,7 +14,6 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
         });
         const result = await response.json();
         setSavedWebsites(result);
-        console.log(result)
       } catch (error) {
         throw new Error(`${error.message}`)
       }

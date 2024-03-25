@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function SaveWebsiteButton({ toggleModal, user_id, website_id, setSavedWebsites, savedWebsites }) {
+export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleModal, user_id, website_id, setSavedWebsites, savedWebsites }) {
+  const navigate = useNavigate();
 
   async function handleClick() {
     try {
@@ -17,7 +18,7 @@ export default function SaveWebsiteButton({ toggleModal, user_id, website_id, se
       if (!user_id) {
         toggleModal()
       } else {
-        navigate("/websites")
+        toggleSavedMessageModal()
       }
     } catch (error) {
     };
