@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import WebsiteCreatedMessage from './WebsiteCreatedMessage';
 
 export default function WebsiteForm ({website, setWebsite}) {
   const [mainHeading, setMainHeading] = useState("");
@@ -12,7 +13,12 @@ export default function WebsiteForm ({website, setWebsite}) {
   const [p2Heading, setP2Heading] = useState("");
   const [p2Body, setP2Body] = useState("");
   const [footerPhoto, setFooterPhoto] = useState("");
+  const [createdMessageModal, setCreatedMessageModal] = useState(false);
   const navigate = useNavigate();
+
+  function toggleCreatedMessageModal() {
+    setCreatedMessageModal(!createdMessageModal)
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -46,10 +52,10 @@ export default function WebsiteForm ({website, setWebsite}) {
       setP2Heading("");
       setP2Body("");
       setFooterPhoto("");
-      console.log(result)
       setWebsite(result)
-      console.log(website)
-      navigate('/websiteCreated')
+      toggleCreatedMessageModal();
+
+
 
     } catch (error) {
     }
@@ -93,6 +99,8 @@ export default function WebsiteForm ({website, setWebsite}) {
           Footer Photo:<input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} /> <br/> <br/>
         </label>
         <button className="submitButton">Submit</button> 
+
+        {createdMessageModal? <WebsiteCreatedMessage website= {website} toggleCreatedMessageModal={toggleCreatedMessageModal} /> : null}
        
       </form>
 
