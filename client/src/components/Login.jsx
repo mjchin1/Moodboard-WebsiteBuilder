@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function Login({ setUser, user}) {
+export default function Login({ setUser, user, website}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -46,6 +48,41 @@ export default function Login({ setUser, user}) {
         : <h2> Welcome, {`${user.first_name}`}! You have been logged in. </h2>
 
       }
+      <div>
+      {user.user_id && website.website_id? 
+      <>
+      <button onClick= {()=> {
+        navigate(`/website/${website.website_id}`)
+      }}>Back To My Website</button>
+
+      <button onClick= {()=> {
+        navigate("/websites")
+      }}>Saved Websites</button>
+
+      <button onClick={()=>{
+        navigate("/form")
+      }}>Build A Website</button>
+      </>
+      : null
+      
+      }
+    </div>
+
+    <div>
+      {user.user_id && !website.website_id? 
+      <>
+      <button onClick= {()=> {
+        navigate("/websites")
+      }}>Saved Websites</button>
+
+      <button onClick={()=>{
+        navigate("/form")
+      }}>Build A Website</button>
+      </>
+      : null
+      
+      }
+    </div>
 
       </div>
     </>

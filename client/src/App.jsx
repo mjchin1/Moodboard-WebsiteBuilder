@@ -23,7 +23,10 @@ function App() {
   
 
   return (
+    
     <>
+      <h1>MOOD BOARD</h1>
+      <h2>A Website-Building App</h2>
       <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/>
       <Routes>
       <Route path='/' element={<WebsiteForm website={website} setWebsite={setWebsite}/>} />
@@ -31,7 +34,7 @@ function App() {
       <Route path='/website/:id' element={<Website savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user={user} website={website} setWebsite={setWebsite}/>} />
       <Route path='/form' element={<WebsiteForm website={website} setWebsite={setWebsite}/>} />
       <Route path='/register' element={<Registration website={website} user={user} setUser={setUser}/>} />
-      <Route path='/login' element={<Login user={user} setUser={setUser}/>} />
+      <Route path='/login' element={<Login website={website} user={user} setUser={setUser}/>} />
       <Route path='/websiteCreated' element={<WebsiteCreatedMessage website={website}/>} />
       <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
