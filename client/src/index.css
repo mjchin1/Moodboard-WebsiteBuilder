@@ -87,21 +87,106 @@ a {
   padding-right: 10px;
 }
 
-.modal {
-  background-color: white;
-}
 
 .modal {
  
-  width: 600px;
+  width: 500px;
   height: 300px;
   border: solid;
+  border-width: 1px;
+  border-radius: 12px;
   position: fixed;
-  top: 30vh;
+  top: 35vh;
   left: 0;
   right: 0;
   bottom: 0;
   margin: 0 auto;
+  background-color: white;
+  
 }
 
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+  
+}
 
+.modalContent {
+  padding-top: 17%
+}
+
+.createdMessage {
+  animation: fade-down 6s;
+}
+
+.websiteHeader{
+  position: fixed;
+ top: 0vw;
+ left: 0;
+ right: 0;
+ background-color: white;
+}
+
+.navBar{
+  margin-left: 0;
+  margin-right: 0;
+}
+.registrationModalContent {
+  padding-top:40px;
+}
+
+.closeModalButton {
+  background: white;
+  font-family: Gill Sans, sans-serif;
+  margin-top: 10px;
+  margin-right: -80%;
+  font-size: 25px;
+  font-weight: 200;
+
+}
+
+.confirmRemovalModalContent {
+  margin-top: 110px;
+}
+
+.removeButton{
+  display: inline-flex;
+  height:40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.appBody {
+  margin-top: 30vh;
+}
+
+.pageDivider {
+  border-bottom: solid;
+  width: 100vw;
+  border-width: .1px;
+}
+
+.websitePageBody{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.websitePageButtons {
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin-left: 5px;
+  margin-right: 5px;
+}

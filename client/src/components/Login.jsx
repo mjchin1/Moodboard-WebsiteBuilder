@@ -27,8 +27,6 @@ export default function Login({ setUser, user, website}) {
 
   return (
     <>
-
-      <br/>
       <div className="loginPage"> 
       { !user.user_id ? 
         

@@ -1,5 +1,5 @@
 
-export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleModal, user_id, website_id, setSavedWebsites, savedWebsites }) {
+export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleRegistrationModal, user_id, website_id, setSavedWebsites, savedWebsites }) {
 
   async function handleClick() {
     try {
@@ -11,7 +11,7 @@ export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleModal
       const result = await response.json();
 
       if (!user_id) {
-        toggleModal()
+        toggleRegistrationModal()
       } else {
         toggleSavedMessageModal()
       }

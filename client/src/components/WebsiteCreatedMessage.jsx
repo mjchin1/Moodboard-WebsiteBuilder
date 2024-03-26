@@ -6,17 +6,20 @@ function WebsiteCreatedMessage({ website }) {
   
   return (
     <>
-    <div className="modal">
-      <h2>Congratulations, your website has been created!</h2> <br/>
-      
-      <div className="navigateButton">
+   
+    <div className="createdMessage modal">
+      <h2 className="modalContent">Website created.</h2> <br/>
+
+      <div className="navigateButton modalText">
         <button
           onClick={() => navigate(`/website/${website.website_id}`)}
-        > Show me! 
+        > See Website 
         </button>
       </div>
 
       </div>
+
+     
     </>
   );
 }

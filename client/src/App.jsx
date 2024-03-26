@@ -24,10 +24,18 @@ function App() {
 
   return (
     
-    <>
+    <> 
+
+
+    
+      <div className="websiteHeader"> 
       <h1>MOOD BOARD</h1>
       <h2>A Website-Building App</h2>
-      <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/>
+      <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> <br/>
+      <div className="pageDivider"></div>
+      </div>
+      
+      <div className="appBody">
       <Routes>
       <Route path='/' element={<WebsiteForm website={website} setWebsite={setWebsite}/>} />
       <Route path='/all' element={<AllWebsites websites={websites} setWebsites={setWebsites}/>} />
@@ -39,6 +47,8 @@ function App() {
       <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
+
+      </div>
     </>
   )
 }

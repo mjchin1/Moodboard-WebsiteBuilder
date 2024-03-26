@@ -8,11 +8,12 @@ export default function ConfirmRemovalModal({ toggleRemovalModal, savedWebsite, 
     <>
       <div className="modal">
         <div className="overlay"></div>
-        <div className="modal-content">
+        <div className="confirmRemovalModalContent">
         <p> Are you sure that you want to delete this website? </p>
-
+      <div className="removeButton">
       <RemoveSavedWebsiteButton savedWebsite={savedWebsite} savedWebsites={savedWebsites} toggleRemovalModal={toggleRemovalModal}/>
-      <button onClick={toggleRemovalModal}> Back </button>
+      <button onClick={toggleRemovalModal}> Cancel </button>
+      </div>
       </div>
       </div>
 

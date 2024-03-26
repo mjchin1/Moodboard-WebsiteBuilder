@@ -19,6 +19,14 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
     setSavedMessageModal(!savedMessageModal)
   }
 
+  function goToForm() {
+    navigate("/form");
+  }
+
+  function home() {
+    navigate("/")
+  }
+
   useEffect(() => {
     async function getWebsite() {
       try {
@@ -40,6 +48,16 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
 
   return (
     <>
+
+    
+    <div className="websitePageBody">
+      <br/>
+      <div className="websitePageButtons">
+      <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+      <button onClick={goToForm}>Create a New Website</button>
+      <button onClick={home}>Home</button>
+      </div>
+      <div className="websiteContent">
       <h1>{website.main_heading}</h1>
       <h2>{website.subheading}</h2>
       <img className="mainPhoto" src={website.main_photo}></img>
@@ -51,11 +69,12 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <p>{website.p2_body}</p>
       <img className="footerPhoto" src={website.footer_photo}></img>
      
-      <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+     
 
       {registrationModal? <RegistrationReminderModal toggleRegistrationModal={toggleRegistrationModal} /> : null}
       {savedMessageModal? <WebsiteSavedMessage toggleSavedMessageModal={toggleSavedMessageModal} /> : null}
-      
+      </div>
+      </div>
 
    </>
 

@@ -7,24 +7,37 @@ export default function RegistrationReminderModal({ toggleRegistrationModal }) {
   function goToRegistration() {
     navigate("/register")
   }
+
+  function goToLogin() {
+    navigate("/login")
+  }
+
+
     return(
     
     <>
       <div className="modal">
-        <div className="overlay"></div>
-        <div className="modal-content">
-        <p> To save your website, you will need to create an account. </p>
+      <button className="closeModalButton" onClick={toggleRegistrationModal}> x </button>
+        <div className="registrationModalContent">
+        <p> To save your website, you will need to register or log in. </p>
 
         <button onClick= { () => {
         toggleRegistrationModal()
-        console.log("buttonClicked")
         goToRegistration() 
       }
       }> 
         Register
       </button>
 
-      <button onClick={toggleRegistrationModal}> Close </button>
+      <button onClick= { () => {
+        toggleRegistrationModal()
+        goToLogin() 
+      }
+      }> 
+        Log In
+      </button>
+
+     
       </div>
       </div>
 
