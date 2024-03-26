@@ -3,7 +3,9 @@ const client = require("../client");
 async function createUser(body) {
   const { firstName, username, password } = body;
   try {
-    const { rows } = await client.query(
+    const {
+      rows: [user],
+    } = await client.query(
       `
         INSERT INTO users(first_name, username, password)
         VALUES($1, $2, $3)
@@ -11,7 +13,7 @@ async function createUser(body) {
         `,
       [firstName, username, password]
     );
-    return rows;
+    return user;
   } catch (error) {
     throw new Error(`Failed to create user: ${error.message}`);
   }
@@ -47,14 +49,16 @@ async function getUserByUsername(username) {
 async function logUserIn(body) {
   const { username, password } = body;
   try {
-    const { rows } = await client.query(
+    const {
+      rows: [user],
+    } = await client.query(
       `
           SELECT * FROM users
           WHERE username = $1 AND password = $2;
       `,
       [username, password]
     );
-    return rows;
+    return user;
   } catch (error) {
     throw error;
   }

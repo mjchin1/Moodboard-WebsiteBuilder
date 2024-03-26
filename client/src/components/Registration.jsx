@@ -19,7 +19,7 @@ export default function Register({user, website, setUser}) {
         body: JSON.stringify({ firstName, username, password })
       });
       const result = await response.json();
-      setUser(result[0])
+      setUser(result)
       console.log(result)
       console.log(user)
       setUsername("");

@@ -16,7 +16,7 @@ export default function Login({ setUser, user, website}) {
         body: JSON.stringify({ username, password })
       });
       const result = await response.json();
-      setUser(result[0])
+      setUser(result)
       setUsername("");
       setPassword("");
     } catch (error) {
