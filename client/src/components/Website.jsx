@@ -7,6 +7,7 @@ import WebsiteSavedMessage from './WebsiteSavedMessage'
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
   const navigate = useNavigate();
+  const year = new Date().getFullYear();
 
   const [registrationModal, setRegistrationModal] = useState(false);
   const [savedMessageModal, setSavedMessageModal] = useState(false);
@@ -52,27 +53,43 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
     
     <div className="websitePageBody">
       <br/>
+      <div className="websiteInnerBody">
+      
+      <div className="websiteHeader">
+      <h1>{website.main_heading}</h1>
+      <h2 className="websiteSubheading">{website.subheading}</h2>
+
       <div className="websitePageButtons">
       <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
       <button onClick={goToForm}>Create a New Website</button>
       <button onClick={home}>Home</button>
       </div>
+      <br/>
+      <div className="longBreakLine"></div>
+      {/* <div className="pageDivider"></div> */}
+      </div>
+      <br/>
+
+ 
       <div className="websiteContent">
-      <h1>{website.main_heading}</h1>
-      <h2>{website.subheading}</h2>
       <img className="mainPhoto" src={website.main_photo}></img>
-      <h3>{website.p1_heading}</h3>
-      <p>{website.p1_body}</p>
+      <h3 className="paragraphHeading">{website.p1_heading}</h3>
+      <p className="paragraphBody">{website.p1_body}</p> <br/>
       <img className="midPhoto" src={website.mid_photo1}></img>
       <img className="midPhoto" src={website.mid_photo2}></img>
-      <h3>{website.p2_heading}</h3>
-      <p>{website.p2_body}</p>
+      <h3 className="paragraphHeading">{website.p2_heading}</h3>
+      <p className="paragraphBody">{website.p2_body}</p> <br/>
       <img className="footerPhoto" src={website.footer_photo}></img>
      
-     
-
       {registrationModal? <RegistrationReminderModal toggleRegistrationModal={toggleRegistrationModal} /> : null}
       {savedMessageModal? <WebsiteSavedMessage toggleSavedMessageModal={toggleSavedMessageModal} /> : null}
+
+      </div>
+      </div>
+      <div className="websiteFooter">
+        <br/> <br/> <br/> <br/>
+        <p> Made by {`${user.first_name}`}</p> 
+        <p> © {`${website.main_heading} ${year}. All rights reserved.`}</p>
       </div>
       </div>
 

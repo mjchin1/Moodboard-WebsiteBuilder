@@ -25,10 +25,10 @@ function App() {
   return (
     
     <> 
-
+      <div className="app">
 
     
-      <div className="websiteHeader"> 
+      <div className="appHeader"> 
       <h1>MOOD BOARD</h1>
       <h2>A Website-Building App</h2>
       <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> <br/>
@@ -47,6 +47,8 @@ function App() {
       <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
+
+      </div>
 
       </div>
     </>

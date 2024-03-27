@@ -67,25 +67,100 @@ button:focus-visible {
   }
 }
 
+.websitePageButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.websitePageBody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  
+}
+.websiteHeader {
+  width: 100vw;
+  margin: 0 auto;
+  /* background-color: white; */
+  /* font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal; */
+  background-color: white;
+}
+
+.longBreakLine {
+  border-bottom: solid;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.shortBreakLine {
+  border-bottom: solid;
+  width: 30vw;
+  margin: 0 auto;
+}
+.websiteSubheading {
+  font-size: 30px;
+  margin-top: -10px;
+
+}
+
+.websiteFooter {
+  width: 100vw;
+  height: 300px;
+  margin-top: 30px;
+  background-color: #ede9e6;
+}
+
+.websiteContent {
+ 
+  width: 80vw;
+  /* width: 100vw; */
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* background-color:#f0f4f7; */
+  background-color: #ede9e6;
+}
+
+.paragraphHeading {
+  font-size: 30px;
+}
+
+.paragraphBody {
+  width: 60vw;
+  margin: 0 auto;
+  font-size: 23px;
+}
+
 .mainPhoto {
-  width: 500px;
+  width: 70vw;
+  padding-top: 20px;
+  object-fit: cover;
 }
 
 .midPhoto{
   display: inline-flex;
-  width: 500px;
+  width: 35vw;
+  height: 40vh;
   margin-left: 10px;
   margin-right: 10px;
+  object-fit: cover;
 }
 
 .footerPhoto {
-  width: 700px;
+  width: 60vw;
+  height: 35vw;
+  object-fit: cover;
 }
 
 a {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 
 
 .modal {
@@ -127,12 +202,24 @@ a {
   animation: fade-down 6s;
 }
 
-.websiteHeader{
-  position: fixed;
+.appHeader{
+position: fixed;
  top: 0vw;
  left: 0;
  right: 0;
  background-color: white;
+}
+
+.headerBlocker{
+position: absolute;
+ left: 0;
+ right: 0;
+ background-color: white;
+ width: 100vw;
+ height: 400px;
+ z-index: 1;
+
+
 }
 
 .navBar{
@@ -174,18 +261,7 @@ a {
   border-width: .1px;
 }
 
-.websitePageBody{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-}
 
-.websitePageButtons {
-  display: flex;
-  justify-content: center;
-}
 button {
   margin-left: 5px;
   margin-right: 5px;
