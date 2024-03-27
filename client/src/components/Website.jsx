@@ -65,7 +65,7 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <button className="websitePageButton" onClick={home}>Home</button>
       </div>
       <br/>
-      {/* <div className="longBreakLine"></div> */}
+      <div className="longBreakLine"></div> <br/>
       {/* <div className="pageDivider"></div> */}
       </div>
       <br/>
