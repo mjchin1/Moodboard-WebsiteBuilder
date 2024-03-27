@@ -78,8 +78,9 @@ button:focus-visible {
   left: 0;
   right: 0;
   background-color: white;
-  
 }
+
+
 .websiteHeader {
   width: 100vw;
   margin: 0 auto;
@@ -115,14 +116,17 @@ button:focus-visible {
 }
 
 .websiteContent {
- 
   width: 80vw;
-  /* width: 100vw; */
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  /* background-color:#f0f4f7; */
   background-color: #ede9e6;
+}
+
+.websitePageButton {
+  background-color: white;
+  text-decoration: underline;
+
 }
 
 .paragraphHeading {
@@ -133,6 +137,8 @@ button:focus-visible {
   width: 60vw;
   margin: 0 auto;
   font-size: 23px;
+ 
+  
 }
 
 .mainPhoto {
@@ -154,6 +160,7 @@ button:focus-visible {
   width: 60vw;
   height: 35vw;
   object-fit: cover;
+  padding-bottom: 20px;
 }
 
 a {

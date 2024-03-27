@@ -1,7 +1,7 @@
 const websiteContent = [
   {
     main_heading: "Melissa's Website",
-    subheading: "Made using Melissa's WebsiteBuilder",
+    subheading: "Created with MOODBOARD",
     main_photo:
       "https://www.myclickmagazine.com/wp-content/uploads/2019/02/Photographing_Minimalism_Composition_Negative_Space_by_Dana_Walton_16.jpg",
     p1_heading: "Welcome.",

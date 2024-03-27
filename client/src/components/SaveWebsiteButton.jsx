@@ -21,9 +21,9 @@ export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleRegis
 
 return (
   <div className="saveButton">
-    <button onClick={() => {
+    <button className="websitePageButton" onClick={() => {
     handleClick();
-    }}>Save Website</button>
+    }}>Save This Website</button>
   </div>
 );
 };

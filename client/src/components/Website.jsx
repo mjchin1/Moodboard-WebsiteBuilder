@@ -61,11 +61,11 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
 
       <div className="websitePageButtons">
       <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
-      <button onClick={goToForm}>Create a New Website</button>
-      <button onClick={home}>Home</button>
+      <button className="websitePageButton" onClick={goToForm}>Create a New Website</button>
+      <button className="websitePageButton" onClick={home}>Home</button>
       </div>
       <br/>
-      <div className="longBreakLine"></div>
+      {/* <div className="longBreakLine"></div> */}
       {/* <div className="pageDivider"></div> */}
       </div>
       <br/>
@@ -88,7 +88,8 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       </div>
       <div className="websiteFooter">
         <br/> <br/> <br/> <br/>
-        <p> Made by {`${user.first_name}`}</p> 
+        <p> Made by {`${user.first_name}`}</p>
+        <p> Created with MOODBOARD by Melissa J. Chin </p>
         <p> © {`${website.main_heading} ${year}. All rights reserved.`}</p>
       </div>
       </div>
