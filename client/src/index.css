@@ -67,6 +67,9 @@ button:focus-visible {
   }
 }
 
+.appSubheading {
+  margin-top: -15px;
+}
 .websitePageButtons {
   display: flex;
   justify-content: center;
@@ -80,14 +83,9 @@ button:focus-visible {
   background-color: white;
 }
 
-
 .websiteHeader {
   width: 100vw;
   margin: 0 auto;
-  /* background-color: white; */
-  /* font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal; */
   background-color: white;
 }
 
@@ -104,7 +102,7 @@ button:focus-visible {
 }
 .websiteSubheading {
   font-size: 30px;
-  margin-top: -10px;
+  margin-top: -15px;
 
 }
 
@@ -166,6 +164,8 @@ button:focus-visible {
 a {
   padding-left: 10px;
   padding-right: 10px;
+  color: black;
+  text-decoration: underline;
 }
 
 
@@ -233,6 +233,8 @@ position: absolute;
   margin-left: 0;
   margin-right: 0;
 }
+
+
 .registrationModalContent {
   padding-top:40px;
 }
@@ -272,4 +274,11 @@ position: absolute;
 button {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.logoutButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+  padding-right: 30px;
 }

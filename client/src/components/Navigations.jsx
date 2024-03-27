@@ -5,16 +5,16 @@ export default function Navigations({user, setUser, setWebsite, setSavedWebsites
     return (
         <nav>
             <Link to = '/'>Home</Link>
-            <Link to = '/form'>Form</Link>
-            <Link to = '/register'>Register</Link>
-            <Link to = '/login'>Login</Link>
-            <Link to = '/websites'>Saved</Link>
-            <Link to = '/all'>All Websites</Link>
-            <Link to = '/website/:id'>Website</Link>
-            <Link to = '/websiteCreated'>Website Created</Link>
-            <Link to = '/websiteSaved'>Website Saved</Link>
+            <Link to = '/form'>Build A Website</Link>
+            {!user.user_id? <Link to = '/register'>Register</Link> : null}
+            {!user.user_id? <Link to = '/login'>Login</Link> : null}
+            <Link to = '/websites'>My Websites</Link>
+            {/* <Link to = '/all'>All Websites</Link> */}
+            {/* <Link to = '/website/:id'>Website</Link> */}
+            {/* <Link to = '/websiteCreated'>Website Created</Link> */}
+            {/* <Link to = '/websiteSaved'>Website Saved</Link> */}
 
-           {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
+          
         </nav>
     );
 };

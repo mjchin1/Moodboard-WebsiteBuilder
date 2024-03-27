@@ -10,6 +10,7 @@ import SavedWebsites from './components/SavedWebsites'
 import Login from './components/Login'
 import WebsiteCreatedMessage from './components/WebsiteCreatedMessage'
 import WebsiteSavedMessage from './components/WebsiteSavedMessage'
+import LogoutButton from './components/LogoutButton'
 
 
 
@@ -27,10 +28,11 @@ function App() {
     <> 
       <div className="app">
 
-    
+      
       <div className="appHeader"> 
-      <h1>MOOD BOARD</h1>
-      <h2>A Website-Building App</h2>
+      {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
+      <h1 className="appHeading">MOODBOARD</h1>
+      <h2 className="appSubheading">A Website-Building App</h2>
       <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> <br/>
       <div className="pageDivider"></div>
       </div>
