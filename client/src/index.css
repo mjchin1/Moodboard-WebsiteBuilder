@@ -99,6 +99,7 @@ button:focus-visible {
   border-bottom: solid;
   width: 30vw;
   margin: 0 auto;
+  border-width: .1px;
 }
 .websiteSubheading {
   font-size: 30px;

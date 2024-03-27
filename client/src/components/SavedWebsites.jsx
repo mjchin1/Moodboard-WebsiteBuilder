@@ -10,6 +10,10 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     setRemovalModal(!removalModal)
   }
 
+  function goToForm() {
+    navigate("/form");
+  }
+
   useEffect(() => {
     async function fetchSavedWebsites() {
       try {
@@ -54,10 +58,18 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
           {removalModal&& <ConfirmRemovalModal toggleRemovalModal={toggleRemovalModal} savedWebsite={savedWebsite} savedWebsites={savedWebsites}/>}
           </>
         ))}
+        <br/>
+        <div className="shortBreakLine"></div>
+        <br/>
+        <button onClick={goToForm}>Build A New Website</button>
 
       </>
     </div>
-    : <p>No websites saved.</p>
+    : 
+    <>
+    <p>No websites saved.</p>
+    <button onClick={goToForm}> Build A Website</button>
+    </>
       }
     </div>
 
