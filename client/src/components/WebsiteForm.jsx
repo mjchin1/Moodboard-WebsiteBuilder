@@ -65,40 +65,66 @@ export default function WebsiteForm ({website, setWebsite}) {
   return (
 <>
     <div className="websiteFormCard">
+      <h2 className="websiteFormHeading">Build Your Website</h2>
+      <div className="tinyBreakLine"></div> <br/>
 
       <form className="websiteForm" onSubmit={handleSubmit}>
-        <h2 className="websiteFormHeading">Build Your Website</h2>
+        
         <label>
-          Main Heading:<input value={mainHeading} onChange={(event) => setMainHeading(event.target.value)} /> <br/>
-        </label>
+         What would you like your website to be called?
+          <br/> <input value={mainHeading} onChange={(event) => setMainHeading(event.target.value)} /> <br/>
+        </label> <br/>
+
         <label>
-          Subheading:<input value={subheading} onChange={(event) => setSubheading(event.target.value)} /><br/>
-        </label>
+          Provide a tagline or a short sentence that describes what your website does.
+          <input value={subheading} onChange={(event) => setSubheading(event.target.value)} /><br/>
+        </label> <br/>
+
         <label>
-          Main Photo:<input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} /> <br/>
-        </label>
+          Provide a title for your opening paragraph.  
+          <br/> <input value={p1Heading} placeholder="Example: About Me"onChange={(event) => setP1Heading(event.target.value)} /> <br/>
+        </label> <br/> 
+
         <label>
-          Paragraph 1 Heading:<input value={p1Heading} onChange={(event) => setP1Heading(event.target.value)} /> <br/>
-        </label>
+          Write your opening paragraph. 
+          <br/><textarea placeholder="Example: I'm passionate about building web applications because..." value={p1Body} onChange={(event) => setP1Body(event.target.value)} /> <br/>
+        </label> <br/>
+
+
+        <label> 
+          Provide a title for your closing paragraph. <br/>
+          <input value={p2Heading} placeholder="Example: My Upcoming Projects" onChange={(event) => setP2Heading(event.target.value)} /> <br/>
+        </label> <br/>
+
         <label>
-          Paragraph 1 Body:<input value={p1Body} onChange={(event) => setP1Body(event.target.value)} /> <br/>
-        </label>
+          Write your closing paragraph.<br/>
+          <textarea placeholder="Example: Thank you for checking out my work. Please be on the lookout for what's coming next..." value={p2Body} onChange={(event) => setP2Body(event.target.value)} /> <br/>
+        </label> <br/>
+
+
+
+        <p className="formText"> Now, let's choose 4 photos that you would like to appear on your website. These should ideally be high-resolution photos with a landscape orientation. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
+
         <label>
-          Mid-page Photo 1:<input value={midPhoto1} onChange={(event) => setMidPhoto1(event.target.value)} /><br/>
+          Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} /> <br/>
         </label>
+
         <label>
-          Mid-Page Photo 2:<input value={midPhoto2} onChange={(event) => setMidPhoto2(event.target.value)} /> <br/>
+          Photo 2: <input value={midPhoto1} onChange={(event) => setMidPhoto1(event.target.value)} /><br/>
         </label>
+
         <label>
-          Paragraph 2 Heading:<input value={p2Heading} onChange={(event) => setP2Heading(event.target.value)} /> <br/>
+         Photo 3: <input value={midPhoto2} onChange={(event) => setMidPhoto2(event.target.value)} /> <br/>
         </label>
+
         <label>
-          Paragraph 2 Body:<input value={p2Body} onChange={(event) => setP2Body(event.target.value)} /> <br/>
-        </label>
-        <label>
-          Footer Photo:<input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} /> <br/> <br/>
-        </label>
-        <button className="submitButton">Submit</button> 
+         Photo 4: <input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} /> <br/>
+        </label> <br/>
+
+        <p className="formText"> Let's see what you've created!</p> <br/>
+    
+
+        <button className="submitButton">Create My Website</button> 
 
         {createdMessageModal? <WebsiteCreatedMessage website= {website} toggleCreatedMessageModal={toggleCreatedMessageModal} /> : null}
        

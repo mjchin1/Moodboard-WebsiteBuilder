@@ -28,7 +28,7 @@ function App() {
     <> 
       <div className="app">
 
-      
+      <br/>
       <div className="appHeader"> 
       {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
       <h1 className="appHeading">MOODBOARD</h1>

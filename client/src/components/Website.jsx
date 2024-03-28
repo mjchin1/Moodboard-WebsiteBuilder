@@ -58,7 +58,6 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <div className="websiteHeader">
       <h1>{website.main_heading}</h1>
       <h2 className="websiteSubheading">{website.subheading}</h2>
-
       <div className="websitePageButtons">
       <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
       <button className="websitePageButton" onClick={goToForm}>Create a New Website</button>
@@ -72,13 +71,22 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
 
  
       <div className="websiteContent">
-      <img className="mainPhoto" src={website.main_photo}></img>
+     
+      <img className="mainPhoto" src={website.main_photo}></img> <br/> <br/>
+      
+      <div className="tinyBreakLine"></div> 
       <h3 className="paragraphHeading">{website.p1_heading}</h3>
-      <p className="paragraphBody">{website.p1_body}</p> <br/>
+      <p className="paragraphBody">{website.p1_body}</p> <br/> 
+      <div className="tinyBreakLine"></div> <br/>
+      
       <img className="midPhoto" src={website.mid_photo1}></img>
-      <img className="midPhoto" src={website.mid_photo2}></img>
+      <img className="midPhoto" src={website.mid_photo2}></img> <br/> <br></br>
+      
+      <div className="tinyBreakLine"></div> 
       <h3 className="paragraphHeading">{website.p2_heading}</h3>
       <p className="paragraphBody">{website.p2_body}</p> <br/>
+      <div className="tinyBreakLine"></div> <br/>
+     
       <img className="footerPhoto" src={website.footer_photo}></img>
      
       {registrationModal? <RegistrationReminderModal toggleRegistrationModal={toggleRegistrationModal} /> : null}

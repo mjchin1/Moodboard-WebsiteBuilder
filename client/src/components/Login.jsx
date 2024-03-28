@@ -33,11 +33,11 @@ export default function Login({ setUser, user, website}) {
           <form className="loginForm"onSubmit={handleSubmit}>
             <h2 className="loginHeading">Log In</h2>
             <label>
-              Username:<input value={username} onChange={(event) => setUsername(event.target.value)} />
-            </label>
+              Username: <input value={username} onChange={(event) => setUsername(event.target.value)} />
+            </label> <br/>
             <label>
-              Password:<input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-            </label>
+              Password: <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+            </label> <br/> <br/>
             <button className="submitButton"
             >Submit</button>
           </form>

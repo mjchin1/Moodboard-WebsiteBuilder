@@ -8,7 +8,7 @@ function WebsiteCreatedMessage({ website }) {
     <>
    
     <div className="createdMessage modal">
-      <h2 className="modalContent">Website created.</h2> <br/>
+      <h2 className="modalContent">Your website has been created.</h2> <br/>
 
       <div className="navigateButton modalText">
         <button
