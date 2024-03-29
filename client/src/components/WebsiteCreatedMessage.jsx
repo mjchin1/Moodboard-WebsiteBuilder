@@ -12,7 +12,9 @@ function WebsiteCreatedMessage({ website }) {
 
       <div className="navigateButton modalText">
         <button
-          onClick={() => navigate(`/website/${website.website_id}`)}
+          onClick={() => {
+            navigate(`/website/${website.website_id}`)
+            window.scrollTo(0,0)}}
         > See Website 
         </button>
       </div>

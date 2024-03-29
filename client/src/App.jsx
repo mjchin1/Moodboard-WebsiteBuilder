@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import './App.css'
 import AllWebsites from './components/AllWebsites'
 import Website from './components/Website'
@@ -20,6 +20,7 @@ function App() {
   const [website, setWebsite] = useState({});
   const [user, setUser] = useState({})
   const [savedWebsites, setSavedWebsites] = useState([])
+  const location = useLocation()
 
   
 
@@ -29,6 +30,7 @@ function App() {
       <div className="app">
 
       <br/>
+      {location.pathname!== '/website/:id' ?
       <div className="appHeader"> 
       {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
       <h1 className="appHeading">MOODBOARD</h1>
@@ -36,6 +38,8 @@ function App() {
       <Navigations setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> <br/>
       <div className="pageDivider"></div>
       </div>
+        : null
+        }
       
       <div className="appBody">
       <Routes>
@@ -49,7 +53,11 @@ function App() {
       <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
+      </div>
 
+      <div className="appFooter">
+        <p> MOODBOARD by Melissa J. Chin</p>
+        <p> March 2024 </p>
       </div>
 
       </div>

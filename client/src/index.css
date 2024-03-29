@@ -98,10 +98,24 @@ body {
   margin-top: -15px;
 }
 
+.appFooter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 100vw;
+  background-color: #ebedf5;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .websiteFormCard {
   display: flex;
   justify-content: center;
-  height: 2000px;
+  height: 1700px;
   background-color: white;
   margin: 0 auto;
 }
@@ -143,11 +157,12 @@ textarea{
   border-width: .2px;
   width: 31vw;
   height: 30vh;
+  font-family: sans-serif;
 
 }
 
 .formText {
- width: 31vw;
+ width: 40vw;
  margin: 0 auto;
  font-size: 20px;
 }

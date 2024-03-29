@@ -10,8 +10,8 @@ export default function Navigations({user, setUser, setWebsite, setSavedWebsites
             {!user.user_id? <Link to = '/login'>Login</Link> : null}
             <Link to = '/websites'>My Websites</Link>
             {/* <Link to = '/all'>All Websites</Link> */}
-            {/* <Link to = '/website/:id'>Website</Link> */}
-            {/* <Link to = '/websiteCreated'>Website Created</Link> */}
+            <Link to = '/website/:id'>Website</Link>
+            <Link to = '/websiteCreated'>Website Created</Link>
             {/* <Link to = '/websiteSaved'>Website Saved</Link> */}
 
           

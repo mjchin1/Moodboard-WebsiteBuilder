@@ -96,7 +96,7 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       </div>
       <div className="websiteFooter">
         <br/> <br/> <br/> <br/>
-        <p> Made by {`${user.first_name}`}</p>
+        { user.user_id? <p> Made by {`${user.first_name}`}</p> : null }
         <p> Created with MOODBOARD by Melissa J. Chin </p>
         <p> © {`${website.main_heading} ${year}. All rights reserved.`}</p>
       </div>

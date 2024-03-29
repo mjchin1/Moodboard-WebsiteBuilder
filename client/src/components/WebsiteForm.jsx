@@ -82,13 +82,13 @@ export default function WebsiteForm ({website, setWebsite}) {
         </label> <br/>
 
         <label>
-          Provide a title for your opening paragraph.  
+          Provide a title for your opening paragraph.
           <br/> <input value={p1Heading} placeholder="Example: About Me"onChange={(event) => setP1Heading(event.target.value)} /> <br/>
         </label> <br/> 
 
         <label>
           Write your opening paragraph. 
-          <br/><textarea placeholder="Example: I'm passionate about building web applications because..." value={p1Body} onChange={(event) => setP1Body(event.target.value)} /> <br/>
+          <br/><textarea placeholder="Example: Some things that I'm passionate about include..." value={p1Body} onChange={(event) => setP1Body(event.target.value)} /> <br/>
         </label> <br/>
 
 
@@ -104,7 +104,7 @@ export default function WebsiteForm ({website, setWebsite}) {
 
 
 
-        <p className="formText"> Now, let's choose 4 photos that you would like to appear on your website. These should ideally be high-resolution photos with a landscape orientation. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
+        <p className="formText"> Now let's choose 4 high-resolution, landscape-oriented photos that you would like to appear on your website. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
 
         <label>
           Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} /> <br/>
