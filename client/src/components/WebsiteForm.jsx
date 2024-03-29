@@ -65,6 +65,7 @@ export default function WebsiteForm ({website, setWebsite}) {
   return (
 <>
     <div className="websiteFormCard">
+      <div className="websiteFormBorder">
       <h2 className="websiteFormHeading">Build Your Website</h2>
       <div className="tinyBreakLine"></div> <br/>
 
@@ -77,7 +78,7 @@ export default function WebsiteForm ({website, setWebsite}) {
 
         <label>
           Provide a tagline or a short sentence that describes what your website does.
-          <input value={subheading} onChange={(event) => setSubheading(event.target.value)} /><br/>
+          <br/><input value={subheading} onChange={(event) => setSubheading(event.target.value)} /><br/>
         </label> <br/>
 
         <label>
@@ -129,6 +130,7 @@ export default function WebsiteForm ({website, setWebsite}) {
         {createdMessageModal? <WebsiteCreatedMessage website= {website} toggleCreatedMessageModal={toggleCreatedMessageModal} /> : null}
        
       </form>
+      </div>
 
     </div>
     </>

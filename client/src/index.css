@@ -70,8 +70,14 @@ body {
   min-height: 100vh;
   background-color: #f7f5fc;
   background-color:#9dbfe3;
+  background-color: #d9cced;
   background-image: url("https://cdn4.volusion.store/exgsz-ywkdq/v/vspfiles/photos/PDG250x150x100Blk-2.jpg?v-cache=1530789477");
   background-image: url("https://cdn4.volusion.store/exgsz-ywkdq/v/vspfiles/photos/PDG250x150x100Blk-2.jpg?v-cache=1530789477");
+  background-image: url("./assets/photo3.png");
+  background-size: auto;
+  background-size: cover;
+  background-position-x: center;
+
 
   padding-bottom: 200px;
 }
@@ -82,6 +88,8 @@ body {
    left: 0;
    right: 0;
    background-color: white;
+   /* background-image: url("https://cdn4.volusion.store/exgsz-ywkdq/v/vspfiles/photos/PDG250x150x100Blk-2.jpg?v-cache=1530789477");
+   background-image: url("https://t3.ftcdn.net/jpg/04/72/07/66/360_F_472076647_chcqwR9bT0F3WfjZbCynSZDUWLpThEoC.jpg"); */
 
   
   }
@@ -91,15 +99,22 @@ body {
 }
 
 .websiteFormCard {
-  width: 60vw;
-  height: 1600px;
+  display: flex;
+  justify-content: center;
+  height: 2000px;
+  background-color: white;
+  margin: 0 auto;
 }
+
 
 .websiteFormHeading {
   padding-top: 30px;
   font-size: 30px;
   margin-bottom: 10px;
+  width: 60vw;
+ 
 }
+
 
 label {
   font-size: 20px; 
@@ -126,13 +141,13 @@ textarea{
   padding-right: 10px;
   border-radius: 3px;
   border-width: .2px;
-  width: 45vw;
+  width: 31vw;
   height: 30vh;
 
 }
 
 .formText {
- width: 50vw;
+ width: 31vw;
  margin: 0 auto;
  font-size: 20px;
 }
