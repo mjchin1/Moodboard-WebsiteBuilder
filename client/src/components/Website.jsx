@@ -6,6 +6,9 @@ import WebsiteSavedMessage from './WebsiteSavedMessage'
 
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
+ console.log(savedWebsites)
+ console.log(website)
+ console.log(savedWebsites.some((currentWebsite) => currentWebsite.website_id === website.website_id))
   const navigate = useNavigate();
   const year = new Date().getFullYear();
 
@@ -26,6 +29,10 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
 
   function home() {
     navigate("/")
+  }
+
+  function goToSavedSites() {
+    navigate("/websites")
   }
 
   useEffect(() => {
@@ -59,7 +66,15 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       <h1>{website.main_heading}</h1>
       <h2 className="websiteSubheading">{website.subheading}</h2>
       <div className="websitePageButtons">
-      <SaveWebsiteButton toggleRegistrationModal={toggleRegistrationModal} toggleSavedMessageModal={toggleSavedMessageModal} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites} user_id={user.user_id} website_id={website.website_id}/>
+      {!savedWebsites.some((currentWebsite) => currentWebsite.website_id === website.website_id)
+        ? <SaveWebsiteButton
+          toggleRegistrationModal={toggleRegistrationModal}
+          toggleSavedMessageModal={toggleSavedMessageModal}
+          savedWebsites={savedWebsites}
+          setSavedWebsites={setSavedWebsites}
+          user_id={user.user_id}
+          website_id={website.website_id}/>
+        :<button className="websitePageButton" onClick={goToSavedSites}>My Saved Websites</button>}
       <button className="websitePageButton" onClick={goToForm}>Create a New Website</button>
       <button className="websitePageButton" onClick={home}>Home</button>
       </div>

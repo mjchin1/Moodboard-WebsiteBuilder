@@ -73,7 +73,7 @@ export default function WebsiteForm ({website, setWebsite}) {
         
         <label>
          What would you like your website to be called?
-          <br/> <input value={mainHeading} onChange={(event) => setMainHeading(event.target.value)} /> <br/>
+          <br/> <input value={mainHeading} onChange={(event) => setMainHeading(event.target.value)} required /> <br/>
         </label> <br/>
 
         <label>

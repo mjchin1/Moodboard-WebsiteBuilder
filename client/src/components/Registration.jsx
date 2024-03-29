@@ -28,7 +28,6 @@ export default function Register({user, website, setUser}) {
     
     } catch (error) {
     }
-
   }
 
   return (

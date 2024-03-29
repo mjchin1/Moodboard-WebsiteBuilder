@@ -19,9 +19,9 @@ export default function Login({ setUser, user, website}) {
       setUser(result)
       setUsername("");
       setPassword("");
+
     } catch (error) {
     };
-
 
   };
 

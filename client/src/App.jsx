@@ -30,7 +30,7 @@ function App() {
       <div className="app">
 
       <br/>
-      {location.pathname!== '/website/:id' ?
+      {location.pathname!== `/website/${website.website_id}` ?
       <div className="appHeader"> 
       {user.user_id? <LogoutButton setWebsite={setWebsite} setSavedWebsite={setSavedWebsites} user={user} setUser={setUser}/> : null }
       <h1 className="appHeading">MOODBOARD</h1>
@@ -54,12 +54,13 @@ function App() {
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       </Routes>
       </div>
-
+      { location.pathname!== `/website/${website.website_id}` ?
       <div className="appFooter">
         <p> MOODBOARD by Melissa J. Chin</p>
         <p> March 2024 </p>
       </div>
-
+      : null
+}
       </div>
     </>
   )

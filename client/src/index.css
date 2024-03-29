@@ -71,15 +71,13 @@ body {
   background-color: #f7f5fc;
   background-color:#9dbfe3;
   background-color: #d9cced;
-  background-image: url("https://cdn4.volusion.store/exgsz-ywkdq/v/vspfiles/photos/PDG250x150x100Blk-2.jpg?v-cache=1530789477");
-  background-image: url("https://cdn4.volusion.store/exgsz-ywkdq/v/vspfiles/photos/PDG250x150x100Blk-2.jpg?v-cache=1530789477");
   background-image: url("./assets/photo3.png");
   background-size: auto;
   background-size: cover;
   background-position-x: center;
 
 
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
 }
 
 .appHeader{
@@ -105,10 +103,9 @@ body {
   height: 300px;
   width: 100vw;
   background-color: #ebedf5;
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
