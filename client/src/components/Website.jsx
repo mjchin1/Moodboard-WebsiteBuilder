@@ -6,9 +6,6 @@ import WebsiteSavedMessage from './WebsiteSavedMessage'
 
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
- console.log(savedWebsites)
- console.log(website)
- console.log(savedWebsites.some((currentWebsite) => currentWebsite.website_id === website.website_id))
   const navigate = useNavigate();
   const year = new Date().getFullYear();
 
@@ -80,7 +77,6 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
       </div>
       <br/>
       <div className="longBreakLine"></div> <br/>
-      {/* <div className="pageDivider"></div> */}
       </div>
       <br/>
 

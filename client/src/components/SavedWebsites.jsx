@@ -50,6 +50,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
               <button className="savedWebsiteName" onClick={() => {
                 setWebsite(savedWebsite);
                 navigate(`/website/${savedWebsite.website_id}`);
+                window.scrollTo(0,0)
               }}
               >  Go To Website </button> <br /> <br/>
               <button onClick={toggleRemovalModal}>Delete</button> <br/> <br/>
