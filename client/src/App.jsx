@@ -55,10 +55,10 @@ function App() {
       </Routes>
       </div>
       { location.pathname!== `/website/${website.website_id}` ?
-      <div className="appFooter">
+      <footer className="appFooter">
         <p> MOODBOARD by Melissa J. Chin</p>
-        <p> March 2024 </p>
-      </div>
+        <p> 2024 </p>
+      </footer>
       : null
 }
       </div>

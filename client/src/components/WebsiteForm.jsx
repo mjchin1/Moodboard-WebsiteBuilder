@@ -125,7 +125,7 @@ export default function WebsiteForm ({website, setWebsite}) {
         <p className="formText"> Let's see what you've created!</p> <br/>
     
 
-        <button className="submitButton">Create My Website</button> 
+        <button className="createWebsiteButton">Create My Website</button> 
 
         {createdMessageModal? <WebsiteCreatedMessage website= {website} toggleCreatedMessageModal={toggleCreatedMessageModal} /> : null}
        

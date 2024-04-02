@@ -39,7 +39,7 @@ export default function Login({ setUser, user, website}) {
               Password: <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
             </label> <br/> <br/>
             <button className="submitButton"
-            >Submit</button>
+            >Submit</button> <br/>
           </form>
      
         

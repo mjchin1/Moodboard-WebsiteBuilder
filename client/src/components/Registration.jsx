@@ -36,9 +36,11 @@ export default function Register({user, website, setUser}) {
     <div className="register">
    
 
-      <h2>Register</h2>
+   
 
       <form className="registrationForm" onSubmit={handleSubmit}>
+
+      <h2>Register</h2>
         <label>
           First Name:<input value={firstName} onChange={(event) => setFirstname(event.target.value)} /> <br/>
         </label>
@@ -49,10 +51,10 @@ export default function Register({user, website, setUser}) {
           Password:<input type="password" value={password} onChange={(event) => setPassword(event.target.value)} /> <br/> <br/>
         </label>
         <button className="submitButton">Submit</button> 
+        <h3> Already have an account? Log in{<Link to = "/login">here</Link>}.</h3>
        
       </form>
-      <br/>
-      <h3> Already have an account? Log in{<Link to = "/login">here</Link>}.</h3>
+
   
     </div>
       : 
