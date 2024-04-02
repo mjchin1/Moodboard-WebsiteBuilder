@@ -131,7 +131,6 @@ body {
  
 }
 
-
 label {
   font-size: 20px; 
   padding-right: 10px;
@@ -435,3 +434,10 @@ button {
   width: 500px;
 }
 
+.logoutPage {
+  padding-top: 50px;
+  width: 40vw;
+  height: 250px;
+  margin-top: -350px;
+ 
+}
