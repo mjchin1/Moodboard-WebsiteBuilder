@@ -34,9 +34,9 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
 
   return (
     <>
-    <div>
-    <br/>
+    <div className ="savedWebsitesPage">
     <h2>Saved Websites</h2>
+    <div className="tinyBreakLine"></div>
     { savedWebsites.length? 
    
     <div className="savedWebsitesContainer">
@@ -52,23 +52,24 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
                 navigate(`/website/${savedWebsite.website_id}`);
               }}
               >  Go To Website </button> <br /> <br/>
-              <button onClick={toggleRemovalModal}>Delete</button>
+              <button onClick={toggleRemovalModal}>Delete</button> <br/> <br/>
+              <div className="tinyBreakLine"></div>
             </div>
           </div>
           {removalModal&& <ConfirmRemovalModal toggleRemovalModal={toggleRemovalModal} savedWebsite={savedWebsite} savedWebsites={savedWebsites}/>}
           </>
         ))}
         <br/>
-        <div className="shortBreakLine"></div>
-        <br/>
-        <button onClick={goToForm}>Build A New Website</button>
+        <button onClick={goToForm}>Build A New Website</button> <br/> <br/>
 
       </>
     </div>
     : 
     <>
+    <div className="savedWebsitesText">
     <p>No websites saved.</p>
     <button onClick={goToForm}> Build A Website</button>
+    </div>
     </>
       }
     </div>

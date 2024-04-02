@@ -43,9 +43,10 @@ export default function Login({ setUser, user, website}) {
           </form>
      
         
-        : <h2> Welcome, {`${user.first_name}`}! You have been logged in. </h2>
+        : <h2> Welcome, {`${user.first_name}`}! You have been logged in. </h2> 
 
       }
+      <br/>
       <div>
       {user.user_id && website.website_id? 
       <>
@@ -66,7 +67,7 @@ export default function Login({ setUser, user, website}) {
       }
     </div>
 
-    <div>
+    <div >
       {user.user_id && !website.website_id? 
       <>
       <button onClick= {()=> {

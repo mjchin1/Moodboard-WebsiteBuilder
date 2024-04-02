@@ -19,10 +19,10 @@ export default function RegistrationMessage({user, website}) {
   
   return (
  
-      <div>
+      <div className="registrationForm registrationMessage">
       <h2> Welcome, {`${user.first_name}`}! You are now registered. </h2>
       
-      {website?
+      {website.website_id?
       <div>
       <button onClick={handleClick1}>Back To Your Website</button>
       <button onClick={handleClick2}>Create A New Website</button>

@@ -110,7 +110,6 @@ body {
 .websiteFormCard {
   display: flex;
   justify-content: center;
-  height: 2000px;
   background-color: white;
   margin: 0 auto;
 }
@@ -229,9 +228,7 @@ textarea{
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #ede9e6;
-  font-family: Palatino, URW Palladio L, serif;
   font-family: Optima, sans-serif;
-  /* font-family: Courier New, monospace; */
 }
 
 .websitePageButton {
@@ -351,6 +348,7 @@ position: absolute;
 
 .registrationModalContent {
   padding-top:40px;
+  font-family: sans-serif;
 }
 
 .closeModalButton {
@@ -398,19 +396,42 @@ button {
   padding-right: 30px;
 }
 
-.loginForm {
+.loginPage {
   width: 45vw;
   display: flex;
   flex-direction: column;
-  margin-top: -350px;
+  margin-top: 15vw;
   margin-bottom: 80px;
+  height: 30vh;
+  padding-top: 10vh;
+
+}
+
+.loginForm {
+  margin-top: -25px;
 }
 
 .registrationForm {
   width: 45vw;
-  margin-top: -300px;
+  margin-top: 20vh;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 80px;
-
 }
+
+.registrationMessage {
+  height: 20vh;
+}
+
+.savedWebsitesPage {
+  width: 800px;
+  min-height: 20vh;
+ padding-top: 40px;
+}
+
+
+.savedWebsitesText{
+  margin: 0 auto;
+  width: 500px;
+}
+
