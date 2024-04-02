@@ -65,7 +65,13 @@ export default function WebsiteForm ({website, setWebsite}) {
   return (
 <>
     <div className="websiteFormCard">
+      
       <div className="websiteFormBorder">
+        <br/> <br/>
+      <div className="appIntro">
+      <span > Welcome to <strong>MOODBOARD</strong>, an app that builds you a beautiful website instantly. All you need to do is choose the words and photos that you would like to appear on your site, and we'll use them to create a webpage that is both organized and aesthetically pleasing. Let's get started! </span>
+      </div>
+    
       <h2 className="websiteFormHeading">Build Your Website</h2>
       <div className="tinyBreakLine"></div> <br/>
 
