@@ -76,6 +76,9 @@ export default function WebsiteForm ({website, setWebsite}) {
       <h2 className="websiteFormHeading">Build Your Website</h2>
       <div className="tinyBreakLine"></div> <br/>
 
+      <p className="formText"> All fields are required.</p> <br/>
+
+
       <form className="websiteForm" onSubmit={handleSubmit}>
         
         <label>
@@ -85,28 +88,28 @@ export default function WebsiteForm ({website, setWebsite}) {
 
         <label>
           Provide a tagline or a short sentence that describes what your website does.
-          <br/><input value={subheading} onChange={(event) => setSubheading(event.target.value)} /><br/>
+          <br/><input value={subheading} onChange={(event) => setSubheading(event.target.value)} required /><br/>
         </label> <br/>
 
         <label>
           Provide a title for your opening paragraph.
-          <br/> <input value={p1Heading} placeholder="Example: About Me"onChange={(event) => setP1Heading(event.target.value)} /> <br/>
+          <br/> <input value={p1Heading} placeholder="Example: About Me"onChange={(event) => setP1Heading(event.target.value)} required /> <br/>
         </label> <br/> 
 
         <label>
           Write your opening paragraph. 
-          <br/><textarea placeholder="Example: Some things that I'm passionate about include..." value={p1Body} onChange={(event) => setP1Body(event.target.value)} /> <br/>
+          <br/><textarea placeholder="Example: Some things that I'm passionate about include..." value={p1Body} onChange={(event) => setP1Body(event.target.value)} required /> <br/>
         </label> <br/>
 
 
         <label> 
           Provide a title for your closing paragraph. <br/>
-          <input value={p2Heading} placeholder="Example: My Upcoming Projects" onChange={(event) => setP2Heading(event.target.value)} /> <br/>
+          <input value={p2Heading} placeholder="Example: My Upcoming Projects" onChange={(event) => setP2Heading(event.target.value)} required /> <br/>
         </label> <br/>
 
         <label>
           Write your closing paragraph.<br/>
-          <textarea placeholder="Example: Thank you for checking out my work. Please be on the lookout for what's coming next..." value={p2Body} onChange={(event) => setP2Body(event.target.value)} /> <br/>
+          <textarea placeholder="Example: Thank you for checking out my work. Please be on the lookout for what's coming next..." value={p2Body} onChange={(event) => setP2Body(event.target.value)} required /> <br/>
         </label> <br/>
 
 
@@ -114,19 +117,19 @@ export default function WebsiteForm ({website, setWebsite}) {
         <p className="formText"> Now let's choose 4 high-resolution, landscape-oriented photos that you would like to appear on your website. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
 
         <label>
-          Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} /> <br/>
+          Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} required /> <br/>
         </label>
 
         <label>
-          Photo 2: <input value={midPhoto1} onChange={(event) => setMidPhoto1(event.target.value)} /><br/>
+          Photo 2: <input value={midPhoto1} onChange={(event) => setMidPhoto1(event.target.value)} required /><br/>
         </label>
 
         <label>
-         Photo 3: <input value={midPhoto2} onChange={(event) => setMidPhoto2(event.target.value)} /> <br/>
+         Photo 3: <input value={midPhoto2} onChange={(event) => setMidPhoto2(event.target.value)} required /> <br/>
         </label>
 
         <label>
-         Photo 4: <input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} /> <br/>
+         Photo 4: <input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} required /> <br/>
         </label> <br/>
 
         <p className="formText"> Let's see what you've created!</p> <br/>
