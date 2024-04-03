@@ -24,6 +24,7 @@ export default function WebsiteForm ({website, setWebsite}) {
     event.preventDefault();
     try {
       const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
+      // const response = await fetch(`/api/websites/${website.website_id}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',

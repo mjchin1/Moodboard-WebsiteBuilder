@@ -4,6 +4,7 @@ export default function SaveWebsiteButton({ toggleSavedMessageModal, toggleRegis
   async function handleClick() {
     try {
       const response = await fetch('http://localhost:8080/api/userWebsites/', {
+      // const response = await fetch('/api/userWebsites/', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({user_id, website_id}),
