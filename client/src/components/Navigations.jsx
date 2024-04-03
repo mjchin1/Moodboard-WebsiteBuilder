@@ -8,7 +8,6 @@ export default function Navigations({user, setUser, setWebsite, setSavedWebsites
             {!user.user_id? <Link to = '/register'>Register</Link> : null}
             {!user.user_id? <Link to = '/login'>Login</Link> : null}
             {user.user_id? <Link to = '/websites'>My Saved Websites</Link>: null}
-            <Link to = '/website/:id'>Website</Link>
         </nav>
     );
 };

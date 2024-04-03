@@ -78,6 +78,7 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
         :<button className="websitePageButton" onClick={goToSavedSites}>My Saved Websites</button>}
       <button className="websitePageButton" onClick={goToForm}>Create a New Website</button>
       <button className="websitePageButton" onClick={goToHome}>Home</button>
+
       </div>
       <br/>
       <div className="longBreakLine"></div> <br/>

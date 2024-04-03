@@ -60,6 +60,7 @@ export default function WebsiteForm ({website, setWebsite}) {
         <br/> <br/>
       <h2 className="websiteFormHeading">Edit Website</h2>
       <div className="tinyBreakLine"></div> <br/>
+      <p className="formText">All fields are required.</p> <br/>
 
       <form className="websiteForm" onSubmit={handleSubmit}>
         
