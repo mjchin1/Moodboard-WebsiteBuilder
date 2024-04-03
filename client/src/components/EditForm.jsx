@@ -1,60 +1,49 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import WebsiteCreatedMessage from './WebsiteCreatedMessage';
+import EditMessageModal from './EditMessageModal';
 
 export default function WebsiteForm ({website, setWebsite}) {
-  const [mainHeading, setMainHeading] = useState("");
-  const [subheading, setSubheading] = useState("");
-  const [mainPhoto, setMainPhoto] = useState("");
-  const [p1Heading, setP1Heading] = useState("");
-  const [p1Body, setP1Body] = useState("");
-  const [midPhoto1, setMidPhoto1] = useState("");
-  const [midPhoto2, setMidPhoto2] = useState("");
-  const [p2Heading, setP2Heading] = useState("");
-  const [p2Body, setP2Body] = useState("");
-  const [footerPhoto, setFooterPhoto] = useState("");
-  const [createdMessageModal, setCreatedMessageModal] = useState(false);
+  const [mainHeading, setMainHeading] = useState(website.main_heading);
+  const [subheading, setSubheading] = useState(website.subheading);
+  const [mainPhoto, setMainPhoto] = useState(website.main_photo);
+  const [p1Heading, setP1Heading] = useState(website.p1_heading);
+  const [p1Body, setP1Body] = useState(website.p1_body);
+  const [midPhoto1, setMidPhoto1] = useState(website.mid_photo1);
+  const [midPhoto2, setMidPhoto2] = useState(website.mid_photo2);
+  const [p2Heading, setP2Heading] = useState(website.p2_heading);
+  const [p2Body, setP2Body] = useState(website.p2_body);
+  const [footerPhoto, setFooterPhoto] = useState(website.footer_photo);
+  const [editMessageModal, setEditMessageModal] = useState(false);
   const navigate = useNavigate();
 
-  function toggleCreatedMessageModal() {
-    setCreatedMessageModal(!createdMessageModal)
-    window.scroll(1300, 1300)
+  function toggleEditMessageModal() {
+    setEditMessageModal(!editMessageModal)
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/websites', {
-        method: "POST",
+      const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
+        method: "PUT",
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          mainHeading,
-          subheading,
-          mainPhoto,
-          p1Heading,
-          p1Body,
-          midPhoto1,
-          midPhoto2,
-          p2Heading,
-          p2Body, 
-          footerPhoto
+          main_heading: mainHeading,
+          subheading: subheading,
+          main_photo: mainPhoto,
+          p1_heading: p1Heading,
+          p1_body: p1Body,
+          mid_photo1: midPhoto1,
+          mid_photo2: midPhoto2,
+          p2_heading: p2Heading,
+          p2_body: p2Body, 
+          footer_photo: footerPhoto
         })
       });
       const result = await response.json();
-      setMainHeading("");
-      setSubheading("");
-      setMainPhoto("");
-      setP1Heading("");
-      setP1Body("");
-      setMidPhoto1("");
-      setMidPhoto2("");
-      setP2Heading("");
-      setP2Body("");
-      setFooterPhoto("");
       setWebsite(result)
-      toggleCreatedMessageModal();
+      toggleEditMessageModal();
 
 
 
@@ -69,11 +58,7 @@ export default function WebsiteForm ({website, setWebsite}) {
       
       <div className="websiteFormBorder">
         <br/> <br/>
-      <div className="appIntro">
-      <span > Welcome to <strong>MOODBOARD</strong>, an app that builds a beautiful website for you instantly. Just choose the words and photos that you would like to appear on your site, and we'll use them to create a webpage that is both organized and aesthetically pleasing. Let's get started! </span>
-      </div>
-    
-      <h2 className="websiteFormHeading">Build Your Website</h2>
+      <h2 className="websiteFormHeading">Edit Website</h2>
       <div className="tinyBreakLine"></div> <br/>
 
       <form className="websiteForm" onSubmit={handleSubmit}>
@@ -128,13 +113,10 @@ export default function WebsiteForm ({website, setWebsite}) {
         <label>
          Photo 4: <input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} /> <br/>
         </label> <br/>
-
-        <p className="formText"> Let's see what you've created!</p> <br/>
     
+        <button className="createWebsiteButton">Edit</button> <br/> <br/>
 
-        <button className="createWebsiteButton">Create My Website</button> <br/> <br/>
-
-        {createdMessageModal? <WebsiteCreatedMessage website= {website} toggleCreatedMessageModal={toggleCreatedMessageModal} /> : null}
+        {editMessageModal? <EditMessageModal website= {website} toggleEditMessageModal={toggleEditMessageModal} /> : null}
        
       </form>
       </div>

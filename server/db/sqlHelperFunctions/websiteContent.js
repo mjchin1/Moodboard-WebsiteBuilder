@@ -89,8 +89,8 @@ async function deleteWebsite(id) {
   }
 }
 
-async function updateWebsite(id, fields = {}) {
-  const setString = Object.keys(fields)
+async function updateWebsite(id, body = {}) {
+  const setString = Object.keys(body)
     .map((key, index) => `"${key}"=$${index + 1}`)
     .join(", ");
   if (setString.length === 0) {
@@ -106,7 +106,7 @@ async function updateWebsite(id, fields = {}) {
       WHERE website_id=${id}
       RETURNING *;
       `,
-      Object.values(fields)
+      Object.values(body),
     );
     return websites;
   } catch (error) {

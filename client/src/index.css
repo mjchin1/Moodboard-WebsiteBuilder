@@ -188,6 +188,7 @@ textarea{
   margin: 0 auto;
   background-color: white;
   font-family: Palatino, URW Palladio L, serif;
+  font-size: 22px;
 }
 
 .longBreakLine {
@@ -210,7 +211,7 @@ textarea{
   border-width: .1px;
 }
 .websiteSubheading {
-  font-size: 30px;
+  font-size: 35px;
   margin-top: -15px;
 
 }
@@ -233,7 +234,7 @@ textarea{
 
 .websitePageButton {
   background-color: white;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .paragraphHeading {
@@ -302,6 +303,10 @@ a {
   margin: 0 auto;
   background-color: white;
   
+}
+
+.savedModal {
+  font-family: sans-serif;
 }
 
 @keyframes fade-down {
@@ -438,8 +443,8 @@ button {
 .logoutPage {
   padding-top: 50px;
   width: 40vw;
-  height: 250px;
-  margin-top: -350px;
+  height: 30vh;
+  margin-top: 1vh;
 }
 
 .appIntro {

@@ -12,6 +12,7 @@ import WebsiteCreatedMessage from './components/WebsiteCreatedMessage'
 import WebsiteSavedMessage from './components/WebsiteSavedMessage'
 import LogoutButton from './components/LogoutButton'
 import LogoutPage from './components/LogoutPage'
+import EditForm from './components/EditForm'
 
 
 
@@ -54,6 +55,7 @@ function App() {
       <Route path='/websiteSaved' element={<WebsiteSavedMessage/>} />
       <Route path='/websites' element={<SavedWebsites user={user} setUser={setUser} website={website} setWebsite={setWebsite} savedWebsites={savedWebsites} setSavedWebsites={setSavedWebsites}/>} />
       <Route path='/logout' element={<LogoutPage/>} />
+      <Route path='/edit' element={<EditForm website={website} setWebsite={setWebsite}/>} />
       </Routes>
       </div>
       { location.pathname!== `/website/${website.website_id}` ?

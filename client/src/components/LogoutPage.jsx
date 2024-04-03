@@ -6,6 +6,7 @@ export default function LogoutPage() {
 
   function navToHome() {
     navigate("/")
+    window.scroll(0,0)
   }
 
   return (
