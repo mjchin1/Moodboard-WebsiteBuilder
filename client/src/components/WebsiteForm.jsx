@@ -25,7 +25,7 @@ export default function WebsiteForm ({website, setWebsite}) {
     event.preventDefault();
     try {
       const response = await fetch('http://localhost:8080/api/websites', {
-      // const response = await fetch('/api/websites', {
+      // const response = await fetch('https://moodboardwebsitebuilder.onrender.com/api/websites', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

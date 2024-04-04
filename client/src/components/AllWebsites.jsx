@@ -6,7 +6,7 @@ export default function AllWebsites({websites, setWebsites}) {
     async function getAllWebsites() {
       try {
         const response = await fetch("http://localhost:8080/api/websites", {
-          // const response = await fetch("/api/websites", {
+          // const response = await fetch("https://moodboardwebsitebuilder.onrender.com/api/websites", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
