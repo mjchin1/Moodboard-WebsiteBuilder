@@ -44,22 +44,22 @@ export default function Login({ setUser, user, website}) {
           </form>
      
         
-        : <h2> Welcome, {`${user.first_name}`}! You have been logged in. </h2> 
+        : <h2 className="loginHeading"> Welcome, {`${user.first_name}`}! You have been logged in. </h2> 
 
       }
       <br/>
       <div>
       {user.user_id && website.website_id? 
       <>
-      <button onClick= {()=> {
+      <button className="loginPageButton" onClick= {()=> {
         navigate(`/website/${website.website_id}`)
       }}>Back To My Website</button>
 
-      <button onClick= {()=> {
+      <button className="loginPageButton" onClick= {()=> {
         navigate("/websites")
       }}>Saved Websites</button>
 
-      <button onClick={()=>{
+      <button className="loginPageButton" onClick={()=>{
         navigate("/form")
       }}>Build A Website</button>
       </>
@@ -71,11 +71,11 @@ export default function Login({ setUser, user, website}) {
     <div >
       {user.user_id && !website.website_id? 
       <>
-      <button onClick= {()=> {
+      <button className="loginPageButton" onClick= {()=> {
         navigate("/websites")
       }}>Saved Websites</button>
 
-      <button onClick={()=>{
+      <button className="loginPageButton" onClick={()=>{
         navigate("/form")
       }}>Build A Website</button>
       </>

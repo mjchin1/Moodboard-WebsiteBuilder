@@ -454,3 +454,85 @@ button {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+@media screen and (max-width: 500px) {
+
+  .body{
+    width: 100vw;
+  }
+
+  .appHeading {
+    font-size: 30px;
+  }
+  .appSubheading {
+    font-size: 23px;
+  }
+
+  .appIntro {
+    font-size: 15px;
+    width: 250px;
+  }
+
+  .websiteFormHeading {
+    font-size: 18px;
+  }
+
+  .formText {
+    font-size: 15px;
+    width: 250px;
+  }
+
+  label {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  input {
+    width: 200px;
+    font-size: 15px;
+  }
+
+  textArea {
+    width: 200px;
+    font-size: 15px;
+  }
+
+  .createWebsiteButton {
+    width: 175px;
+    font-size: 14px;
+  }
+
+  .appFooter {
+    height: 200px;
+  }
+
+  .registrationForm {
+    width: 70vw;
+  }
+
+  .registrationHeading {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .loginPage {
+    width: 70vw;
+   }
+
+  .loginHeading {
+    font-size: 18px;
+    margin-top: -15px;
+  }
+
+  .submitButton {
+    width: 175px;
+    font-size: 14px;
+  }
+
+  .loginPageButton {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+   
+}
