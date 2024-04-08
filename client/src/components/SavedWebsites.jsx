@@ -36,7 +36,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
   return (
     <>
     <div className ="savedWebsitesPage">
-    <h2>Saved Websites</h2>
+    <h2 className="savedWebsitesHeading">Saved Websites</h2>
     <div className="tinyBreakLine"></div>
     { savedWebsites.length? 
    
@@ -48,13 +48,13 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
           <div key={savedWebsite.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
               <p>{savedWebsite.main_heading}</p>
-              <button className="savedWebsiteName" onClick={() => {
+              <button className="savedWebsitesButton" onClick={() => {
                 setWebsite(savedWebsite);
                 navigate(`/website/${savedWebsite.website_id}`);
                 window.scrollTo(0,0)
               }}
               >  Go To Website </button> <br /> <br/>
-              <button onClick={toggleRemovalModal}>Delete</button> <br/> <br/>
+              <button className="savedWebsitesButton" onClick={toggleRemovalModal}>Delete</button> <br/> <br/>
               <div className="tinyBreakLine"></div>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
           </>
         ))}
         <br/>
-        <button onClick={goToForm}>Build A New Website</button> <br/> <br/>
+        <button className="savedWebsitesButton" onClick={goToForm}>Build A New Website</button> <br/> <br/>
 
       </>
     </div>
@@ -70,7 +70,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     <>
     <div className="savedWebsitesText">
     <p>No websites saved.</p>
-    <button onClick={goToForm}> Build A Website</button> <br/> <br/>
+    <button className="savedWebsitesButton" onClick={goToForm}> Build A Website</button> <br/> <br/>
     </div>
     </>
       }

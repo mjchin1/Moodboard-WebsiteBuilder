@@ -477,6 +477,18 @@ button {
     font-size: 18px;
   }
 
+  .websiteForm {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+
+  .websiteFormCard{
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+
   .formText {
     font-size: 15px;
     width: 250px;
@@ -534,5 +546,59 @@ button {
     margin-top: 10px;
     font-size: 14px;
   }
-   
+  
+  .savedWebsitesPage{
+    width: 70vw;
+
+  }
+
+  .savedWebsitesHeading {
+    font-size: 18px;
+  }
+
+  .savedWebsitesButton {
+    font-size: 14px;
+  }
+
+  .websiteTitle {
+    font-size: 26px;
+  }
+  .websiteSubheading {
+    font-size: 20px;
+  }
+
+  .websitePageButton {
+    font-size: 14px;
+    width: 25vw;
+  }
+
+  .websitePageButtons {
+   width: 40vw;
+   margin: 0 auto;
+  }
+
+  .paragraphHeading {
+    font-size: 18px;
+  }
+
+  .paragraphBody {
+    font-size: 15px;
+  }
+
+  .midPhoto {
+    width: 32vw;
+    height: auto;
+  }
+
+  .websiteFooter {
+    height: 230px;
+    font-size: 14px;
+  }
+
+  .mainPhoto {
+    width: 65vw;
+  }
+
+
+
 }
