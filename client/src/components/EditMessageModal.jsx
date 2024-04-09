@@ -12,8 +12,8 @@ export default function EditMessageModal({website, toggleEditMessageModal}) {
     <>
     <div className="modal savedModal">
     <button className="closeModalButton" onClick={handleClick}>x</button>
-    <h2>Your website has been edited.</h2> <br/>
-    <div className="navigateButton">
+    <h2 className="editMessageText">Your website has been edited.</h2>
+    <div className="editModalButton">
       <button onClick={() =>{
       navigate(`/website/${website.website_id}`)
       window.scroll(0,0)}} 

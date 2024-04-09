@@ -11,7 +11,7 @@ function WebsiteCreatedMessage({ website }) {
       <h2 className="modalContent">Your website has been created.</h2> <br/>
 
       <div className="navigateButton modalText">
-        <button
+        <button className="modalButton"
           onClick={() => {
             navigate(`/website/${website.website_id}`)
             window.scrollTo(0,0)}}

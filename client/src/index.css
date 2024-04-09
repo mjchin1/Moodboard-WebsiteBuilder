@@ -473,6 +473,10 @@ button {
     width: 250px;
   }
 
+  .logoutButton {
+    padding-right: 35px;
+  }
+
   .websiteFormHeading {
     font-size: 18px;
   }
@@ -481,7 +485,6 @@ button {
     width: 70vw;
     margin: 0 auto;
   }
-
 
   .websiteFormCard{
     width: 75vw;
@@ -517,6 +520,7 @@ button {
 
   .appFooter {
     height: 200px;
+    margin-bottom: 0; 
   }
 
   .registrationForm {
@@ -530,6 +534,7 @@ button {
 
   .loginPage {
     width: 70vw;
+    height: 200px;
    }
 
   .loginHeading {
@@ -569,7 +574,7 @@ button {
 
   .websitePageButton {
     font-size: 14px;
-    width: 25vw;
+    width: 20vw;
   }
 
   .websitePageButtons {
@@ -599,6 +604,78 @@ button {
     width: 65vw;
   }
 
+  .modal {
+    width: 60vw;
+    height: 50vw;
+  }
+
+  .modalContent {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .modalButton {
+    margin-top: -30px;
+    font-size: 14px;
+  }
+
+  .closeModalButton {
+    width: 2px;
+    height: 50px;
+    margin-right: -155px;
+    padding-top: 0px;
+  }
 
 
+  .savedModalContent {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logoutPage {
+    margin-top: -325px;
+    width: 70vw;
+    height: 220px;
+  }  
+  .logoutMessage {
+    font-size: 18px;
+  }
+  .logoutPageButton {
+    font-size: 14px;
+  }
+
+  .registrationModalContent {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -65px;
+  }
+
+  .welcomeMessage {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .welcomeMessageButton {
+    font-size: 14px;
+  }
+
+  .registrationMessage {
+    margin-top: -150px;
+  }
+
+  .savedWebsitesText {
+    margin: 0 auto;
+    border: solid;
+  }
+  .editMessageText {
+    font-size: 18px;
+  }
+
+  .editModalButton {
+    font-size: 14px;
+  }
 }

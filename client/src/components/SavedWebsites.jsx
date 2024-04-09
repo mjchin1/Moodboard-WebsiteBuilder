@@ -68,7 +68,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
     </div>
     : 
     <>
-    <div className="savedWebsitesText">
+    <div className="savedWebsitesCard">
     <p>No websites saved.</p>
     <button className="savedWebsitesButton" onClick={goToForm}> Build A Website</button> <br/> <br/>
     </div>

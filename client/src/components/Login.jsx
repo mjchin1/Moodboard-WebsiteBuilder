@@ -53,7 +53,7 @@ export default function Login({ setUser, user, website}) {
       <>
       <button className="loginPageButton" onClick= {()=> {
         navigate(`/website/${website.website_id}`)
-      }}>Back To My Website</button>
+      }}>Back To Your Website</button>
 
       <button className="loginPageButton" onClick= {()=> {
         navigate("/websites")

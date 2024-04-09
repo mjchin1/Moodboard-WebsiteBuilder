@@ -12,9 +12,9 @@ export default function LogoutPage() {
   return (
  
       <div className="logoutPage">
-      <h2> You have been logged out. </h2>
-      <h2> Thank you for using MOODBOARD. </h2>
-      <button onClick={navToHome}>Home</button>
+      <h2 className="logoutMessage"> You have been logged out. </h2>
+      <h2 className="logoutMessage"> Thank you for using MOODBOARD. </h2>
+      <button className="logoutPageButton" onClick={navToHome}>Home</button>
       </div>
   
   );

@@ -23,7 +23,7 @@ export default function WebsiteForm ({website, setWebsite}) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(`/api/websites/${website.website_id}`, {
+      const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
       // const response = await fetch(`https://moodboardwebsitebuilder.onrender.com/api/websites/${website.website_id}`, {
         method: "PUT",
         headers: {
