@@ -678,4 +678,18 @@ button {
   .editModalButton {
     font-size: 14px;
   }
+
+  .confirmRemovalModalContent {
+    margin: 30px;
+  }
+
+  .removeButton {
+    margin: 0 auto;
+    display: flex;
+    align-items: space-around;
+    font-size: 14px;
+
+  }
+
+
 }
