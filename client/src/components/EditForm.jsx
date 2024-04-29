@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import EditMessageModal from './EditMessageModal';
 
 export default function WebsiteForm ({website, setWebsite}) {
@@ -14,7 +13,6 @@ export default function WebsiteForm ({website, setWebsite}) {
   const [p2Body, setP2Body] = useState(website.p2_body);
   const [footerPhoto, setFooterPhoto] = useState(website.footer_photo);
   const [editMessageModal, setEditMessageModal] = useState(false);
-  const navigate = useNavigate();
 
   function toggleEditMessageModal() {
     setEditMessageModal(!editMessageModal)

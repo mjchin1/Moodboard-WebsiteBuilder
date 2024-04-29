@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import RegistrationMessage from './RegistrationMessage'
+import { Link } from 'react-router-dom';
+import RegistrationMessage from './RegistrationMessage';
 
 export default function Register({user, website, setUser}) {
   const [firstName, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -20,9 +19,7 @@ export default function Register({user, website, setUser}) {
         body: JSON.stringify({ firstName, username, password })
       });
       const result = await response.json();
-      setUser(result)
-      console.log(result)
-      console.log(user)
+      setUser(result);
       setUsername("");
       setPassword("");
       setFirstname("");

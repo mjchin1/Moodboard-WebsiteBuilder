@@ -17,8 +17,8 @@ export default function WebsiteForm ({website, setWebsite}) {
   const navigate = useNavigate();
 
   function toggleCreatedMessageModal() {
-    setCreatedMessageModal(!createdMessageModal)
-    window.scroll(1300, 1300)
+    setCreatedMessageModal(!createdMessageModal);
+    window.scroll(1300, 1300);
   }
 
   async function handleSubmit(event) {
@@ -71,7 +71,7 @@ export default function WebsiteForm ({website, setWebsite}) {
       <div className="websiteFormBorder">
         <br/> <br/>
       <div className="appIntro">
-      <span > Welcome to <strong>MOODBOARD</strong>, an app that builds a beautiful website for you instantly. Just choose the words and photos that you would like to appear on your site, and we'll use them to create a webpage that is both organized and aesthetically pleasing. Let's get started! </span>
+      <span > Welcome to <strong>MOODBOARD</strong>, an app that builds a beautiful website for you instantly. Just choose the words and photos that you would like to appear on your site, and we'll organize them into the perfect webpage. Let's get started! </span>
       </div>
     
       <h2 className="websiteFormHeading">Build Your Website</h2>

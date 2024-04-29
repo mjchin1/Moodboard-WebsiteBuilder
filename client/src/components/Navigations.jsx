@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom';
-import LogoutButton from './LogoutButton'
 
-export default function Navigations({user, setUser, setWebsite, setSavedWebsites}) {
+export default function Navigations({ user }) {
     return (
         <nav>
             <Link to = '/'>Build A Website</Link>

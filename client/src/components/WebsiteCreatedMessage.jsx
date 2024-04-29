@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 
 function WebsiteCreatedMessage({ website }) {
   const navigate = useNavigate(); 
-  console.log(website)
   
   return (
     <>

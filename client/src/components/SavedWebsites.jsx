@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { useNavigate }  from 'react-router-dom';
-import ConfirmRemovalModal from './ConfirmRemovalModal'
+import ConfirmRemovalModal from './ConfirmRemovalModal';
 
-export default function SavedWebsites ({ user, website, setWebsite, savedWebsites, setSavedWebsites }) {
+export default function SavedWebsites ({ user, setWebsite, savedWebsites, setSavedWebsites }) {
   const navigate = useNavigate();
-  const [removalModal, setRemovalModal] = useState()
+  const [removalModal, setRemovalModal] = useState();
 
   function toggleRemovalModal() {
-    setRemovalModal(!removalModal)
-  }
+    setRemovalModal(!removalModal);
+  };
 
   function goToForm() {
     navigate("/form");
-  }
+  };
 
   useEffect(() => {
     async function fetchSavedWebsites() {
@@ -27,7 +27,7 @@ export default function SavedWebsites ({ user, website, setWebsite, savedWebsite
         const result = await response.json();
         setSavedWebsites(result);
       } catch (error) {
-        throw new Error(`${error.message}`)
+        throw new Error(`${error.message}`);
       }
     }
     fetchSavedWebsites();

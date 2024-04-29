@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate} from 'react-router-dom';
-import SaveWebsiteButton from './SaveWebsiteButton'
-import RegistrationReminderModal from './RegistrationReminderModal'
-import WebsiteSavedMessage from './WebsiteSavedMessage'
+import SaveWebsiteButton from './SaveWebsiteButton';
+import RegistrationReminderModal from './RegistrationReminderModal';
+import WebsiteSavedMessage from './WebsiteSavedMessage';
 
 
 export default function Website({user, website, setWebsite, savedWebsites, setSavedWebsites}) {
@@ -13,27 +13,27 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
   const [savedMessageModal, setSavedMessageModal] = useState(false);
 
   function toggleRegistrationModal() {
-    setRegistrationModal(!registrationModal)
-  }
+    setRegistrationModal(!registrationModal);
+  };
 
   function toggleSavedMessageModal() {
-    setSavedMessageModal(!savedMessageModal)
-  }
+    setSavedMessageModal(!savedMessageModal);
+  };
 
   function goToForm() {
     navigate("/form");
-  }
+  };
 
   function goToHome() {
-    navigate("/")
-  }
+    navigate("/");
+  };
   function goToEditForm() {
-    navigate("/edit")
-  }
+    navigate("/edit");
+  };
 
   function goToSavedSites() {
-    navigate("/websites")
-  }
+    navigate("/websites");
+  };
 
   useEffect(() => {
     async function getWebsite() {

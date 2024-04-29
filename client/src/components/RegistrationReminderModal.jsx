@@ -1,16 +1,16 @@
 import {useNavigate} from 'react-router-dom';
 
 export default function RegistrationReminderModal({ toggleRegistrationModal }) {
-  const navigate= useNavigate()
+  const navigate= useNavigate();
   
 
   function goToRegistration() {
-    navigate("/register")
-  }
+    navigate("/register");
+  };
 
   function goToLogin() {
-    navigate("/login")
-  }
+    navigate("/login");
+  };
 
 
     return(

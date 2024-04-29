@@ -1,4 +1,4 @@
-import RemoveSavedWebsiteButton from './RemoveSavedWebsiteButton'
+import RemoveSavedWebsiteButton from './RemoveSavedWebsiteButton';
 
 
 export default function ConfirmRemovalModal({ toggleRemovalModal, savedWebsite, savedWebsites }) {

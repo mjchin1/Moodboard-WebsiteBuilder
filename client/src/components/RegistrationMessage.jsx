@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function RegistrationMessage({user, website}) {
   const navigate = useNavigate();
 
   function handleClick1() {
-    navigate(`/website/${website.website_id}`)
-
-  }
+    navigate(`/website/${website.website_id}`);
+  };
 
   function handleClick2() {
-    navigate("/form")
-
-
-  }
+    navigate("/form");
+  };
 
  
   
