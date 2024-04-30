@@ -5,7 +5,7 @@ export default function RemoveSavedWebsiteButton({ toggleRemovalModal, savedWebs
   async function handleClick() {
     try {
       // const response = await fetch(`http://localhost:8080/api/userWebsites/${savedWebsite.user_website_id}`, {
-      const response = await fetch(`https://moodboardwebsitebuilder.onrender.com/api/userWebsites/${savedWebsite.user_website_id}`, {
+      const response = await fetch(`https://moodboard-backend.onrender.com/api/userWebsites/${savedWebsite.user_website_id}`, {
         
         method: "DELETE",
         headers: {

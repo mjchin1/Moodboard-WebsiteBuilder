@@ -18,7 +18,7 @@ export default function SavedWebsites ({ user, setWebsite, savedWebsites, setSav
     async function fetchSavedWebsites() {
       try {
         // const response = await fetch(`http://localhost:8080/api/userWebsites/user/${user.user_id}`, {
-          const response = await fetch(`https://moodboardwebsitebuilder.onrender.com/api/userWebsites/user/${user.user_id}`, {
+          const response = await fetch(`https://moodboard-backend.onrender.com/api/userWebsites/user/${user.user_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
