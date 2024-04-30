@@ -10,8 +10,8 @@ export default function Register({user, website, setUser}) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/users', {
-      // const response = await fetch('https://moodboardwebsitebuilder.onrender.com/api/users', {
+      // const response = await fetch('http://localhost:8080/api/users', {
+      const response = await fetch('https://moodboardwebsitebuilder.onrender.com/api/users', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

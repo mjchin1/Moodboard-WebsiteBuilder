@@ -38,8 +38,8 @@ export default function Website({user, website, setWebsite, savedWebsites, setSa
   useEffect(() => {
     async function getWebsite() {
       try {
-        const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
-        // const response = await fetch(`https://moodboardwebsitebuilder.onrender.com/api/websites/${website.website_id}`, {
+        // const response = await fetch(`http://localhost:8080/api/websites/${website.website_id}`, {
+        const response = await fetch(`https://moodboardwebsitebuilder.onrender.com/api/websites/${website.website_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
