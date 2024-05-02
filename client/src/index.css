@@ -455,6 +455,9 @@ button {
   padding-right: 40px;
 }
 
+.websiteName {
+  font-size: 20px;
+}
 @media screen and (max-width: 500px) {
 
   .body{

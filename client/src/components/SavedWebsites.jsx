@@ -47,7 +47,7 @@ export default function SavedWebsites ({ user, setWebsite, savedWebsites, setSav
           <>
           <div key={savedWebsite.user_website_id} className="savedWebsiteCard">
             <div className="websiteDetails">
-              <p>{savedWebsite.main_heading}</p>
+              <p className="websiteName">{savedWebsite.main_heading}</p>
               <button className="savedWebsitesButton" onClick={() => {
                 setWebsite(savedWebsite);
                 navigate(`/website/${savedWebsite.website_id}`);
