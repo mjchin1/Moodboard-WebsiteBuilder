@@ -59,6 +59,7 @@ function App() {
       <footer className="appFooter">
         <p> MOODBOARD by Melissa J. Chin</p>
         <p> 2024 </p>
+        <a className="githubLink" href="https://github.com/mjchin1/Moodboard-WebsiteBuilder" target="_blank"> GitHub Repository</a>
       </footer>
       : null
 }

@@ -458,6 +458,11 @@ button {
 .websiteName {
   font-size: 20px;
 }
+
+.githubLink {
+  font-size: 16px;
+  text-decoration: underline;
+}
 @media screen and (max-width: 500px) {
 
   .body{
