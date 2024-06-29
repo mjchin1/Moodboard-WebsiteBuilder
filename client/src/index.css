@@ -546,6 +546,7 @@ button {
     width: 200px;
     font-size: 15px;
     border-color: black;
+    border-right-color: black;
     border-style: solid;
   }
 
