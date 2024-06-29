@@ -543,9 +543,10 @@ button {
   }
 
   textArea {
-    width: 190px;
+    width: 200;
     font-size: 15px;
     border-color: black;
+    border-style: solid;
   }
 
   .createWebsiteButton {
