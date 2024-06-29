@@ -501,6 +501,11 @@ button {
     width: 250px;
   }
 
+  button {
+    color: black;
+  }
+
+
   .logoutButton {
     padding-right: 35px;
   }
@@ -534,11 +539,13 @@ button {
   input {
     width: 200px;
     font-size: 15px;
+    border-color: black;
   }
 
   textArea {
     width: 200px;
     font-size: 15px;
+    border-color: black;
   }
 
   .createWebsiteButton {
