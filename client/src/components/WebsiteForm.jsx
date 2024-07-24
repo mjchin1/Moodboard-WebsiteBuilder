@@ -116,11 +116,11 @@ export default function WebsiteForm ({website, setWebsite}) {
 
 
         <p className="formText"> Now let's choose 4 high-resolution, landscape-oriented photos that you would like to appear on your website. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
-        <p className="formText"> Feel free to copy and paste the linked URLs below for default images: </p> <br/>
+        <p className="formText"> Feel free to copy and paste the linked URLs below for default images: </p>
         <a className="imageLink" href="https://cloudfront.slrlounge.com/wp-content/uploads/2018/07/landscape-photography-tips.jpg" target="_blank">Default Photo 1</a> <br/>
-        <a className="imageLink" href="https://www.myclickmagazine.com/wp-content/uploads/2019/02/Photographing_Minimalism_Composition_Negative_Space_by_Dana_Walton_10.jpg" target="_blank">Default Photo 2</a> <br/>
-        <a className="imageLink" href="https://www.myclickmagazine.com/wp-content/uploads/2019/02/Photographing_Minimalism_Composition_Negative_Space_by_Dana_Walton_01.jpg" target="_blank">Default Photo 3</a> <br/>
-        <a className="imageLink" href="https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/edf03365-ca0b-4164-919a-8271633db575/%40fabulu75_2000px-60.jpg" target="_blank">Default Photo 4</a> <br/>
+        <a className="imageLink" href="https://images.adsttc.com/media/images/6290/ac61/3e4b/31f4/d600/0001/large_jpg/155108.jpg?1653648474" target="_blank">Default Photo 2</a> <br/>
+        <a className="imageLink" href="https://cc-prod.scene7.com/is/image/CCProdAuthor/minimalist-photography_P6_720x437?$pjpeg$&jpegSize=200&wid=720" target="_blank">Default Photo 3</a> <br/>
+        <a className="imageLink" href="https://abbyshepardphotography.com/wp-content/uploads/sites/6246/2019/12/20191009-204540-WhiteSands-1024x684.jpg" target="_blank">Default Photo 4</a> <br/>
 
         <label>
           Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} required /> <br/>
