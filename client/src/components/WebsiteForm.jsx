@@ -116,7 +116,7 @@ export default function WebsiteForm ({website, setWebsite}) {
 
 
         <p className="formText"> Now let's choose 4 high-resolution, landscape-oriented photos that you would like to appear on your website. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
-        <p className="formText"> Feel free to copy and paste the linked URLs below for default images: </p>
+        <p className="formText"> Feel free to copy and paste the linked URLs below to serve as your default images: </p> <br/>
         <a className="imageLink" href="https://cloudfront.slrlounge.com/wp-content/uploads/2018/07/landscape-photography-tips.jpg" target="_blank">Default Photo 1</a> <br/>
         <a className="imageLink" href="https://images.adsttc.com/media/images/6290/ac61/3e4b/31f4/d600/0001/large_jpg/155108.jpg?1653648474" target="_blank">Default Photo 2</a> <br/>
         <a className="imageLink" href="https://cc-prod.scene7.com/is/image/CCProdAuthor/minimalist-photography_P6_720x437?$pjpeg$&jpegSize=200&wid=720" target="_blank">Default Photo 3</a> <br/>
