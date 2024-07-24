@@ -191,7 +191,7 @@ textarea{
 
 .formText2 {
   width: 40vw;
-  margin: 0 auto;
+  text-align: left;
   font-size: 15px;
  }
 
