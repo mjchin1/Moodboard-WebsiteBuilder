@@ -116,11 +116,11 @@ export default function WebsiteForm ({website, setWebsite}) {
 
 
         <p className="formText"> Now let's choose 4 high-resolution, landscape-oriented photos that you would like to appear on your website. Upload your photos by copying and pasting the image URL from a website such as Google Images. </p> <br/>
-        <p className="formText"> Feel free to copy and paste the URLs below for default images: </p> <br/>
+        {/* <p className="formText"> Feel free to copy and paste the URLs below for default images: </p> <br/>
         <p className="formText2">· https://cloudfront.slrlounge.com/wp-content/uploads/2018/07/landscape-photography-tips.jpg</p> <br/>
         <p className="formText2">· https://www.theclickcommunity.com/blog/wp-content/uploads/2015/01/Birds-on-a-Wire-by-Kathy-Roberts-840x560.jpg</p> <br/>
         <p className="formText2">· https://www.myclickmagazine.com/wp-content/uploads/2019/02/Photographing_Minimalism_Composition_Negative_Space_by_Dana_Walton_01.jpg</p> <br/>
-        <p className="formText2">· https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/edf03365-ca0b-4164-919a-8271633db575/%40fabulu75_2000px-60.jpg</p> <br/>
+        <p className="formText2">· https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/edf03365-ca0b-4164-919a-8271633db575/%40fabulu75_2000px-60.jpg</p> <br/> */}
         <label>
           Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} required /> <br/>
         </label>
