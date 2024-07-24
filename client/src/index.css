@@ -190,9 +190,9 @@ textarea{
 }
 
 .formText2 {
-  width: 60vw;
-  text-align: left;
-  font-size: 15px;
+  width: 65vw;
+  margin: 0 auto;
+  font-size: 18px;
  }
 
 .websitePageButtons {
