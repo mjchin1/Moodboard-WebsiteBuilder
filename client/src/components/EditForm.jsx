@@ -114,7 +114,7 @@ export default function WebsiteForm ({website, setWebsite}) {
          Photo 4: <input value={footerPhoto} onChange={(event) => setFooterPhoto(event.target.value)} required /> <br/>
         </label> <br/>
     
-        <button className="createWebsiteButton">Edit</button> <br/> <br/>
+        <button className="createWebsiteButton">Submit Edits</button> <br/> <br/>
 
         {editMessageModal? <EditMessageModal website= {website} toggleEditMessageModal={toggleEditMessageModal} /> : null}
        
