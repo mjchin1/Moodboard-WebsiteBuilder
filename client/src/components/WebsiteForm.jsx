@@ -120,7 +120,7 @@ export default function WebsiteForm ({website, setWebsite}) {
         <a className="imageLink" href="https://cloudfront.slrlounge.com/wp-content/uploads/2018/07/landscape-photography-tips.jpg" target="_blank">Default Photo 1</a> <br/>
         <a className="imageLink" href="https://images.adsttc.com/media/images/6290/ac61/3e4b/31f4/d600/0001/large_jpg/155108.jpg?1653648474" target="_blank">Default Photo 2</a> <br/>
         <a className="imageLink" href="https://cc-prod.scene7.com/is/image/CCProdAuthor/minimalist-photography_P6_720x437?$pjpeg$&jpegSize=200&wid=720" target="_blank">Default Photo 3</a> <br/>
-        <a className="imageLink" href="https://abbyshepardphotography.com/wp-content/uploads/sites/6246/2019/12/20191009-204540-WhiteSands-1024x684.jpg" target="_blank">Default Photo 4</a> <br/>
+        <a className="imageLink" href="https://abbyshepardphotography.com/wp-content/uploads/sites/6246/2019/12/20191009-204540-WhiteSands-1024x684.jpg" target="_blank">Default Photo 4</a> <br/> <br/>
 
         <label>
           Photo 1: <input value={mainPhoto} onChange={(event) => setMainPhoto(event.target.value)} required /> <br/>
